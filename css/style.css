@@ -528,6 +528,24 @@
 						margin-left: 0;
 					}
 
+            ul.checklist
+            {
+            }
+
+                ul.checklist li span.fa-square-o
+                {
+                    font-family: FontAwesome;
+			        font-family: FontAwesome;
+			        font-size: 1em;
+        			text-decoration: none;
+        			font-style: normal;
+        			font-weight: normal;
+        			line-height: 1;
+                    margin: 0 1em 0 0;
+        			-webkit-font-smoothing:antialiased;
+        			-moz-osx-font-smoothing:grayscale;
+                }
+
 		ol
 		{
 		}	
