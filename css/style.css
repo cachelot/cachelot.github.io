@@ -501,6 +501,7 @@
 						ul.social li a.fa-blogger		{ background-color: #FF6501; }
 						ul.social li a.fa-flickr		{ background-color: #0062DB; }
 						ul.social li a.fa-vimeo			{ background-color: #4C8AB0; }
+                        ul.social li a.fa-bitbucket     { background-color: #205081; }
 
 						ul.social li a:hover
 						{
@@ -577,7 +578,8 @@
 
 		.icon.featured
 		{
-			color: #EA8A95;
+			/*color: #EA8A95;*/
+            color: #3E606F;
 			display: block;
 			margin: 0 0 1.5em 0;
 			cursor: default;
