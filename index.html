@@ -1,29 +1,310 @@
 <!DOCTYPE HTML>
+<!--
+	Miniport by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
 	<head>
 		<title>Cachelot - high-performance caching library and server</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="Cachelot" />
 		<meta name="keywords" content="Cachelot, cache, Memcached, distributed cache" />
-<!-- google analytics -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.scrolly.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-desktop.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 
-      ga('create', 'UA-59820172-1', 'auto');
-      ga('require', 'linkid', 'linkid.js');
-      ga('send', 'pageview');
-    </script>
-    <style>
-        a { text-decoration: none; }
-    </style>
+<!-- Google+ Direct Connect -->
+        <link href="https://plus.google.com/b/112273751748286225217/+CachelotIo_cache" rel="publisher" />
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+<!-- Google Analytics -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-59820172-1', 'auto');
+          ga('require', 'linkid', 'linkid.js');
+          ga('send', 'pageview');
+        </script>
 	</head>
 	<body>
-        <h1 align="center"><a href="http://dev.cachelot.io/cachelot">cachelot.io</a></h1>
-		<p>Cachelot is high-performance caching library and distributed caching server. It is compatible with <a href="http://memcached.org" target="_blank">Memcached</a> but introduces higher performance, fewer CPU and memory consumption, and some new features.</p>
-		<p>Cachelot is free and open source (licensed under the terms of <a href="./LICENSE.txt" target="_blank">Simplified BSD License</a>)</p>
-	    <h3 align="center"><a href="http://dev.cachelot.io/cachelot">Get Cachelot</a></h3>
+
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="container">
+					<li><a href="#top">Top</a></li>
+					<li><a href="http://dev.cachelot.io/cachelot">Download</a></li>
+					<li><a href="#about">About</a></li>
+                    <li><a href="#benchmarks">Benchmarks</a></li>
+                    <li><a href="#status">Status</a></li>
+					<li><a href="#contact">Contacts</a></li>
+                    <li><a href="/LICENSE.txt">License</a></li>
+				</ul>
+			</nav>
+
+		<!-- Home -->
+			<div class="wrapper style1 first">
+				<article class="container" id="top">
+					<div class="row">
+						<div class="4u">
+							<span class="image fit"><img src="images/cachelot-io-logo.png" alt="Awesome Cachelot Logo" /></span>
+						</div>
+						<div class="8u">
+							<header>
+								<h1><strong><font color="#FFF">Cachelot</font><font color="#fd7d70">&nbsp;.&nbsp;io</font></strong></h1>
+							</header>
+							<p>Cachelot is high-performance caching library and distributed caching server. It is compatible with <a href="http://memcached.org" target="_blank">Memcached</a> but introduces higher performance, fewer CPU and memory consumption, and some new features.</p>
+							<p>Cachelot is free and open source (licensed under the terms of <a href="http://opensource.org/licenses/BSD-2-Clause" target="_blank">Simplified BSD License</a>)</p>
+                            <ul class="actions">
+                                <li><a href="http://dev.cachelot.io/cachelot" class="button big alt">Get Cachelot</a></li>
+                                <li><a href="#about" class="button big scrolly">Learn More ...</a></li>
+                            </ul>
+						</div>
+					</div>
+				</article>
+			</div>
+
+		<!-- About -->
+			<div class="wrapper style3">
+				<article id="about">
+                    <header>
+                        <h2>What is Cachelot</h2>
+                        <h3>Learn about Cachelot and see if it suits your needs</h3>
+                    </header>
+					<div class="container">
+						<div class="row">
+                            <div class="4u">
+                                <span class="icon featured fa-code"></span>
+                            </div>
+							<div class="8u" style="text-align: left;">
+                                <section>
+    								<header>
+    									<h3>Cachelot Library</h2>
+    									<p>If your application needs to cache some data and retrieve it from the cache with a speed of light, the only way is to store data right into application's memory. That's what cachelot library is.</p>
+    								</header>
+    								<p>One library with the simple interface. All you need is to provide fixed amount of memory for the cache and access or store 3 millions of items per second (depending on the CPU cache size).
+                                       Maybe 3MOps doesn't sound like too big number, but it means ~333 nanosecond spent on a single operation while RAM reference costs 
+                                       <a href="http://www.eecs.berkeley.edu/~rcs/research/interactive_latency.html" target="_blank">~100 nanoseconds</a>.
+                                    </p>
+    								<p>Cachelot can work as a consistent cache returning an error when out of memory or evict old items to store new.</p>
+                                </section>
+                            </div>
+						</div>
+						<hr/>
+						<div class="row">
+							<div class="4u">
+								<span class="icon featured fa-database"></span>
+							</div>
+							<div class="8u" style="text-align: left;">
+                                <section>
+								    <header>
+									   <h3>Distributed Cache Server</h2>
+									   <p>Think Memcached (it is Memcached compatible) but while original <a href="http://memcached.org" target="_blank">Memcached</a> aims to serve hundreds of thousands of connections (bandwidth) Cachelot serves tens of them with higher RPS rate (latency).</p>
+								    </header>
+								    <p>Another good news: Cachelot is single-threaded application, so you can run it consuming fewer resources (for instance, cheaper VPS servers can save a lot).</p>
+								    <p>And yet single Cachelot instance is faster than Memcached to the certain number of connection. Although you're free to scale horizontally running more instances.</p>
+                                </section>
+							</div>
+						</div>
+					</div>
+				</article>
+			</div>
+
+		<!-- Benchmarks -->
+			<div class="wrapper style2">
+                <article id="benchmarks">
+                    <header>
+                        <h2>Benchmarks</h2>
+                        <p>The following benchmark illustrates Cachelot server performance compared to the Memcached performance using the memslap load generator.</p>
+                        <p>Test was performed on KVM virtual machines.</p>
+                    </header>
+                    <div class="container 75%">
+                        <div class="row">
+                            <div class="4u">
+                                <section class="box style1">
+                                    <span class="icon featured-small fa-server"></span>
+                                    <h3>KVM host</h3>
+                                    <ul>
+                                        <li>Eight-core CPU Xeon E3-1240</li> 
+                                        <li>16 Gb RAM</li>
+                                        <li>Cents OS 7</li>
+                                    </ul>
+                                </section>
+                            </div>
+                            <div class="4u">
+                                <section class="box style1">
+                                    <span class="icon featured-small fa-server"></span>
+                                    <h3>Cachelot and Memcached VM guest</h3>
+                                    <ul>
+                                        <li>2 vCPU</li> 
+                                        <li>2 Gb RAM</li>
+                                        <li>Cents OS 7</li>
+                                    </ul>
+                                </section>
+                            </div>
+                            <div class="4u">
+                                <section class="box style1">
+                                    <span class="icon featured-small fa-server"></span>
+                                    <h3>memslap load generator VM guest</h3>
+                                    <ul>
+                                        <li>4 vCPU</li> 
+                                        <li>8 Gb RAM</li>
+                                        <li>Cents OS 7</li>
+                                    </ul>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="12u">
+                                <section>
+                                    <header>
+                                        <h3>Testing method</h3>
+                                    </header>
+                                    <p>After running caching server (Cachelot or Memcached), it warmed up by setting 1,600,000 items. Then memslap was executed 16 times with the same configuration: number of executions, concurrency, get or set test. 
+                                       Resulting time was average among all 16 runs.
+                                    </p>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="12u">
+                                <section>
+                                    <header>
+                                        <h2>Retrieving items performance</h2>
+                                    </header>
+                                    <img src="images/cachelot-vs-memcached-benchmark-get.png" alt="get command performance"/>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="12u">
+                                <section>
+                                    <header>
+                                        <h2>Storing items performance</h2>
+                                    </header>
+                                    <img src="images/cachelot-vs-memcached-benchmark-set.png" alt="set command performance"/>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <footer>
+                        <p>Benchmarks source code available in the project repository</p>
+                    </footer>
+                </article>
+			</div>
+
+		<!-- Project Status -->
+            <div class="wrapper style3">
+                <article id="status">
+                    <div class="container 75%">
+                        <div class="row">
+                            <div class="12u">
+                                <header>
+                                    <h2>See what's coming soon</h2>
+                                    <p>Cachelot is still a 'work in progress', so there are some features that will be added in the nearest future:</p>
+                                </header>
+                                <div style="text-align: left;">
+                                    <ul class="checklist">
+                                        <li><span class="fa fa-square-o"></span>Full set of Memcached commands: cas, touch, append, prepend, stats</li>
+                                        <li><span class="fa fa-square-o"></span>Binary protocol and UDP support</li>
+                                        <li><span class="fa fa-square-o"></span>No library dependencies except STL</li>
+                                        <li><span class="fa fa-square-o"></span>Native Microsoft Windows support</li>
+                                        <li><span class="fa fa-square-o"></span>Binary and source packages</li>
+                                        <li><span class="fa fa-square-o"></span>and more ...</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <footer>
+                        <ul class="actions">
+                            <li><a href="http://dev.cachelot.io/cachelot" class="button big alt">Get Cachelot</a></li>
+                            <li><a href="#contact" class="button big scrolly">Contacts</a></li>
+                        </ul>
+                    </footer>
+                </article>
+            </div>
+
+		<!-- Contact -->
+			<div class="wrapper style4">
+                <article id="contact" class="container 75%">
+                    <!--
+                    <header>
+                        <h2>Get in touch</h2>
+                        <p>If you need any specific features or if you want to know about current development status.</p>
+                    </header>
+                    -->
+                    <div>
+                    <!--
+                        <div class="row">
+                            <div class="12u">
+                                <form method="post" action="#">
+                                    <div>
+                                        <div class="row">
+                                            <div class="6u">
+                                                <input type="text" name="name" id="name" placeholder="Name" />
+                                            </div>
+                                            <div class="6u">
+                                                <input type="email" name="email" id="email" placeholder="Email (promise we don't spam)" />
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="12u">
+                                                <input type="text" name="subject" id="subject" placeholder="Subject" />
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="12u">
+                                                <textarea name="message" id="message" placeholder="Message"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="row 200%">
+                                            <div class="12u">
+                                                <ul class="actions">
+                                                    <li><input type="submit" value="Send Message" /></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    -->
+                        <div class="row">
+                            <div class="12u">
+                                <p>Follow Cachelot on social networks to be aware of recent updates and development process</p>
+                                <ul class="social">
+                                    <!-- <li><a href="#" class="icon fa-rss"><span class="label">RSS</span></a></li> -->
+                                    <li><a href="https://twitter.com/cachelot_io" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                                    <li><a href="https://www.facebook.com/cachelot.io" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                                    <li><a href="https://plus.google.com/u/0/112273751748286225217" rel="publisher" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+                                    <li><a href="http://github.com/cachelot" class="icon fa-github"><span class="label">Github</span></a></li>
+                                    <li><a href="http://bitbucket.org/cachelot/cachelot" class="icon fa-bitbucket"><span class="label">Bitbucket</span></a></li>
+                                </ul>
+                                <hr />
+                            </div>
+                        </div>
+                    </div>
+                    <footer>
+                        <ul id="copyright">
+                            <li>&copy; 2015, cachelot.io. All rights reserved.</li>
+                            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                            <li>Hosted by <a href="https://pages.github.com/">GitHub Pages</a></li>
+                        </ul>
+                    </footer>
+                </article>
+			</div>
+
 	</body>
 </html>
