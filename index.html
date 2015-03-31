@@ -1,15 +1,10 @@
 <!DOCTYPE HTML>
-<!--
-	Miniport by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>Cachelot - high-performance caching library and server</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="Cachelot" />
-		<meta name="keywords" content="Cachelot, cache, Memcached, distributed cache" />
+		<meta name="description" content="Cachelot - high performance cache library and caching server" />
+		<meta name="keywords" content="Cachelot, cache, Memcached, distributed cache, high-performance, C++" />
 		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
 		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery.scrolly.min.js"></script>
@@ -22,7 +17,10 @@
 		</noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
-
+<!-- favicon -->
+        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
 <!-- Google+ Direct Connect -->
         <link href="https://plus.google.com/b/112273751748286225217/+CachelotIo_cache" rel="publisher" />
         <script src="https://apis.google.com/js/platform.js" async defer></script>
@@ -58,16 +56,14 @@
 				<article class="container" id="top">
 					<div class="row">
 						<div class="4u">
-		          <!--
-                            <span class="image fit"><img src="images/cachelot-io-logo.png" alt="Awesome Cachelot Logo" /></span>
-                    -->
+                            <img src="images/cachelot.io-logo.png" alt="Awesome Cachelot Logo" width="256" height="256" />
 						</div>
 						<div class="8u">
 							<header>
 								<h1><strong><font color="#FFF">Cachelot</font><font color="#fd7d70">&nbsp;.&nbsp;io</font></strong></h1>
 							</header>
-							<p>Cachelot is high-performance caching library and distributed caching server. It is compatible with <a href="http://memcached.org" target="_blank">Memcached</a> but introduces higher performance, fewer CPU and memory consumption, and some new features.</p>
-							<p>Cachelot is free and open source (licensed under the terms of <a href="http://opensource.org/licenses/BSD-2-Clause" target="_blank">Simplified BSD License</a>)</p>
+                            <p>Cachelot is a high-performance cache library and distributed caching server. It is compatible with <a href="http://memcached.org" target="_blank">Memcached</a>  but introduces higher performance, with fewer CPU and memory consumption, as well as some new features.</p>
+							<p>Cachelot is free and open source (distributed under the terms of <a href="http://opensource.org/licenses/BSD-2-Clause" target="_blank">Simplified BSD License</a>)</p>
                             <ul class="actions">
                                 <li><a href="http://dev.cachelot.io/cachelot" class="button big alt">Get Cachelot</a></li>
                                 <li><a href="#about" class="button big scrolly">Learn More ...</a></li>
@@ -112,10 +108,10 @@
                                 <section>
 								    <header>
 									   <h3>Distributed Cache Server</h2>
-									   <p>Think Memcached (it is Memcached compatible) but while original <a href="http://memcached.org" target="_blank">Memcached</a> aims to serve hundreds of thousands of connections (bandwidth) Cachelot serves tens of them with higher RPS rate (latency).</p>
+									   <p>Think Memcached (it is Memcached compatible) but while original <a href="http://memcached.org" target="_blank">Memcached</a> aims to serve hundreds of connections (bandwidth) Cachelot serves tens of them with higher RPS rate (latency).</p>
 								    </header>
-								    <p>Another good news: Cachelot is single-threaded application, so you can run it consuming fewer resources (for instance, cheaper VPS servers can save a lot).</p>
-								    <p>And yet single Cachelot instance is faster than Memcached to the certain number of connection. Although you're free to scale horizontally running more instances.</p>
+								    <p>Another good news: Cachelot is a single-threaded application, so you can run it consuming fewer resources (cheaper VPS hosts can be a huge saving).</p>
+								    <p>And yet single Cachelot instance is faster than Memcached while serving a certain number of connections. Never the less, you're free to scale up horizontally by running more instances.</p>
                                 </section>
 							</div>
 						</div>
@@ -129,7 +125,7 @@
                     <header>
                         <h2>Benchmarks</h2>
                         <p>The following benchmark illustrates Cachelot server performance compared to the Memcached performance using the memslap load generator.</p>
-                        <p>Test was performed on KVM virtual machines.</p>
+                        <p>The tests were performed on KVM virtual machines.</p>
                     </header>
                     <div class="container 75%">
                         <div class="row">
@@ -173,7 +169,7 @@
                                     <header>
                                         <h3>Testing method</h3>
                                     </header>
-                                    <p>After running caching server (Cachelot or Memcached), it warmed up by setting 1,600,000 items. Then memslap was executed 16 times with the same configuration: number of executions, concurrency, get or set test. 
+                                    <p>After running caching server (Cachelot or Memcached), it was warmed up by setting 1,600,000 items. Then memslap was executed 16 times with the same configuration: number of executions, concurrency, get or set test. 
                                        Resulting time was average among all 16 runs.
                                     </p>
                                 </section>
