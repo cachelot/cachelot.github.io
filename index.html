@@ -1,309 +1,301 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Cachelot - high-performance caching library and server</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="Cachelot - high performance cache library and caching server" />
-		<meta name="keywords" content="Cachelot, cache, Memcached, distributed cache, high-performance, C++" />
-		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery.scrolly.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/init.js"></script>
-		<noscript>
-			<link rel="stylesheet" href="css/skel.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-desktop.css" />
-		</noscript>
-		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cachelot</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="description" content="Cachelot - high performance cache library and caching server" />
+<meta name="keywords" content="Cachelot, cache, Memcached, distributed cache, high-performance, C++" />
+<meta name="description" content="High-performance cache library and distributed caching server.
+" />
+<link rel="canonical" href="http://www.cachelot.io/">
+<link rel="alternate" type="application/rss+xml" title="Cachelot" href="http://www.cachelot.io/feed.xml" />
+
 <!-- favicon -->
-        <link rel="icon" type="image/png" href="/favicon96x96.png" sizes="96x96">
-        <link rel="icon" type="image/png" href="/favicon32x32.png" sizes="32x32">
-        <link rel="icon" type="image/png" href="/favicon16x16.png" sizes="16x16">
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="/favicon.ico" type="image/x-icon">
-<!-- Google+ Direct Connect -->
-        <link href="https://plus.google.com/b/112273751748286225217/+CachelotIo_cache" rel="publisher" />
-        <script src="https://apis.google.com/js/platform.js" async defer></script>
-<!-- Google Analytics -->
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<link rel="icon" type="image/png" href="/favicon96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon16x16.png" sizes="16x16">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
 
-          ga('create', 'UA-59820172-1', 'auto');
-          ga('require', 'linkid', 'linkid.js');
-          ga('send', 'pageview');
-        </script>
-	</head>
-	<body>
+<!-- Font Awesome -->
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet">
 
-		<!-- Nav -->
-			<nav id="nav">
-				<ul class="container">
-					<li><a href="#top">Top</a></li>
-					<li><a href="http://dev.cachelot.io/cachelot">Download</a></li>
-					<li><a href="#about">About</a></li>
-                    <li><a href="#benchmarks">Benchmarks</a></li>
-                    <li><a href="#status">Status</a></li>
-					<li><a href="#contact">Contacts</a></li>
-                    <li><a href="/LICENSE.txt">License</a></li>
-				</ul>
-			</nav>
+<!-- Custom CSS -->
+<link href="/assets/css/main.css" rel="stylesheet">
 
-		<!-- Home -->
-			<div class="wrapper style1 first">
-				<article class="container" id="top">
-					<div class="row">
-						<div class="4u">
-                            <img src="images/cachelot.io-logo.png" alt="Awesome Cachelot Logo" width="256" height="256" />
-						</div>
-						<div class="8u">
-							<header>
-								<h1><strong><font color="#FFF">Cachelot</font><font color="#fd7d70">&nbsp;.&nbsp;io</font></strong></h1>
-							</header>
-                            <p>Cachelot is a high-performance cache library and distributed caching server. It is compatible with <a href="http://memcached.org" target="_blank">Memcached</a>  but introduces higher performance, with fewer CPU and memory consumption, as well as some new features.</p>
-							<p>Cachelot is free and open source (distributed under the terms of <a href="http://opensource.org/licenses/BSD-2-Clause" target="_blank">Simplified BSD License</a>)</p>
-                            <ul class="actions">
-                                <li><a href="http://dev.cachelot.io/cachelot" class="button big alt">Get Cachelot</a></li>
-                                <li><a href="#about" class="button big scrolly">Learn More ...</a></li>
-                            </ul>
-						</div>
-					</div>
-				</article>
-			</div>
+<!-- Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Raleway:300,400,700' rel='stylesheet' type='text/css'>
 
-		<!-- About -->
-			<div class="wrapper style3">
-				<article id="about">
-                    <header>
-                        <h2>What is Cachelot</h2>
-                    </header>
-					<div class="container">
-						<div class="row">
-                            <div class="2u">
-                                <span class="icon featured fa-code"></span>
-                            </div>
-							<div class="8u" style="text-align: left;">
-                                <section>
-    								<header>
-    									<h3>Cachelot Library</h3>
-    									<p>If your application needs to cache some data and retrieve it from the cache with a speed of light, the only way is to store data right into application's memory. That's what cachelot library is.</p>
-    								</header>
-    								<p>One library with the simple interface. All you need is to provide fixed amount of memory for the cache and access or store 3 millions of items per second (depending on the CPU cache size).
-                                       Maybe 3MOps doesn't sound like too big number, but it means ~333 nanosecond spent on a single operation while RAM reference costs
-                                       <a href="http://www.eecs.berkeley.edu/~rcs/research/interactive_latency.html" target="_blank">~100 nanoseconds</a>.
-                                    </p>
-    								<p>Cachelot can work as a consistent cache returning an error when out of memory or evict old items to store new.</p>
-                                </section>
-                            </div>
-						</div>
-						<hr/>
-						<div class="row">
-							<div class="2u">
-								<span class="icon featured fa-database"></span>
-							</div>
-							<div class="8u" style="text-align: left;">
-                                <section>
-								    <header>
-									   <h3>Distributed Cache Server</h3>
-									   <p>Think Memcached (it is Memcached compatible) but while original <a href="http://memcached.org" target="_blank">Memcached</a> aims to serve hundreds of connections (bandwidth) Cachelot serves tens of them with higher RPS rate (latency).</p>
-								    </header>
-								    <p>Another good news: Cachelot is a single-threaded application, so you can run it consuming fewer resources (cheaper VPS hosts can be a huge saving).</p>
-								    <p>And yet single Cachelot instance is faster than Memcached while serving a certain number of connections. Never the less, you're free to scale up horizontally by running more instances.</p>
-                                </section>
-							</div>
-						</div>
-					</div>
-				</article>
-			</div>
+<-- Javascript -->
+<script src="/assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/js/modernizr.custom.js"></script>
 
-		<!-- Benchmarks -->
-			<div class="wrapper style2">
-                <article id="benchmarks">
-                    <header>
-                        <h2>Benchmarks</h2>
-                        <p>The following benchmark illustrates Cachelot server performance compared to the Memcached performance using the memslap load generator.</p>
-                        <p>The tests were performed on KVM virtual machines.</p>
-                    </header>
-                    <div class="container 75%">
-                        <div class="row">
-                            <div class="4u">
-                                <section class="box style1">
-                                    <span class="icon featured-small fa-server"></span>
-                                    <h3>KVM host</h3>
-                                    <ul>
-                                        <li>Eight-core CPU Xeon E3-1240</li>
-                                        <li>16 Gb RAM</li>
-                                        <li>Cents OS 7</li>
-                                    </ul>
-                                </section>
-                            </div>
-                            <div class="4u">
-                                <section class="box style1">
-                                    <span class="icon featured-small fa-server"></span>
-                                    <h3>Cachelot and Memcached VM guest</h3>
-                                    <ul>
-                                        <li>2 vCPU</li>
-                                        <li>2 Gb RAM</li>
-                                        <li>Cents OS 7</li>
-                                    </ul>
-                                </section>
-                            </div>
-                            <div class="4u">
-                                <section class="box style1">
-                                    <span class="icon featured-small fa-server"></span>
-                                    <h3>memslap load generator VM guest</h3>
-                                    <ul>
-                                        <li>4 vCPU</li>
-                                        <li>8 Gb RAM</li>
-                                        <li>Cents OS 7</li>
-                                    </ul>
-                                </section>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="12u">
-                                <section>
-                                    <header>
-                                        <h3>Testing method</h3>
-                                    </header>
-                                    <p>After running caching server (Cachelot or Memcached), it was warmed up by setting 1,600,000 items. Then memslap was executed 16 times with the same configuration: number of executions, concurrency, get or set test.
-                                       Resulting time was average among all 16 runs.
-                                    </p>
-                                </section>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="12u">
-                                <section>
-                                    <header>
-                                        <h2>Retrieving items performance</h2>
-                                    </header>
-                                    <img src="images/cachelot-vs-memcached-benchmark-get.png" alt="get command performance"/>
-                                </section>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="12u">
-                                <section>
-                                    <header>
-                                        <h2>Storing items performance</h2>
-                                    </header>
-                                    <img src="images/cachelot-vs-memcached-benchmark-set.png" alt="set command performance"/>
-                                </section>
-                            </div>
-                        </div>
-                    </div>
-                    <footer>
-                        <p>Benchmarks source code available in the project repository</p>
-                    </footer>
-                </article>
-			</div>
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
 
-		<!-- Project Status -->
-            <div class="wrapper style3">
-                <article id="status">
-                    <div class="container 75%">
-                        <div class="row">
-                            <div class="12u">
-                                <header>
-                                    <h2>See what's coming soon</h2>
-                                    <p>Cachelot is still a 'work in progress', so there are some features that will be added in the nearest future:</p>
-                                </header>
-                                <div style="text-align: left;">
-                                    <ul class="checklist">
-                                        <li><span class="fa fa-square-o"></span>Full set of Memcached commands: cas, touch, append, prepend, stats</li>
-                                        <li><span class="fa fa-square-o"></span>Binary protocol and UDP support</li>
-                                        <li><span class="fa fa-square-o"></span>No library dependencies except STL</li>
-                                        <li><span class="fa fa-square-o"></span>Native Microsoft Windows support</li>
-                                        <li><span class="fa fa-square-o"></span>Binary and source packages</li>
-                                        <li><span class="fa fa-square-o"></span>and more ...</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <footer>
-                        <ul class="actions">
-                            <li><a href="http://dev.cachelot.io/cachelot" class="button big alt">Get Cachelot</a></li>
-                            <li><a href="#contact" class="button big scrolly">Contacts</a></li>
-                        </ul>
-                    </footer>
-                </article>
+<head>
+<body data-spy="scroll" data-offset="0" data-target="#navbar-main">
+  <div id="navbar-main"> 
+    <!-- Fixed navbar -->
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a href="/index.html#home" class="navbar-brand smoothScroll"><span class="cachelot">cachelot</span><span class="io">.io</span></a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right" id="nav">
+        <li><a href="http://blog.cachelot.io">Blog</a></li>
+        <li><a class="smoothScroll" href="/index.html#about">About</a></li>
+        <li><a class="smoothScroll" href="/index.html#benchmarks">Benchmarks</a></li>
+        <li><a class="smoothScroll" href="/index.html#status">Status</a></li>
+        <li><a class="smoothScroll" href="/index.html#contact">Contact</a></li>
+        <li><a href="/license.txt">License</a></li>
+      </ul>
+    </div>
+    <!--/.nav-collapse --> 
+  </div>
+</div>
+
+  </div>
+  <!-- ==== HEADERWRAP ==== -->
+<article id="headerwrap" name="home">
+  <header class="clearfix"> 
+    <img src="assets/img/logo.png" alt="Awesome Cachelot Logo" width="256" height="256" />
+    <section>
+      <header>
+        <p>High-performance cache library and distributed caching server.</br>
+          Cachelot is free and open source. Distributed under the terms of Simplified BSD License
+        </p>
+      </header>
+      <footer class="centered">
+        <ul class="actions">
+          <li><a href="#about" class="smoothScroll btn altbtn"><i class="fa fa-github"></i>GitHub</a></li>
+          <li><a href="#about" class="smoothScroll btn altbtn"><i class="fa fa-bitbucket"></i>Bitbucket</a></li>
+          <li><a href="#about" class="smoothScroll btn"><i class="fa fa-book"></i>Learn More</a></li>
+        </ul>
+      </footer>
+  </header>
+</article>
+<!-- /headerwrap --> 
+
+<!-- ==== ABOUT ==== -->
+<article id="about" name="about">
+  <div class="container">
+    <div class="row white">
+      <header class="centered">
+        <h2 class=>WHAT IS CACHELOT</h2> <hr />
+      </header>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-2"> <i class="fa fa-cogs fa-5x"></i> </div>
+            <div class="col-lg-10">
+              <section>
+                <header>
+                  <h3>Cachelot Library</h3>
+                  <p>If your application needs to cache some data and retrieve it from the cache with a speed of light, the only way is to store data right into application's memory. That's what cachelot library is.</p>
+                </header>
+                <p>One library with the simple interface. All you need is to provide fixed amount of memory for the cache and access or store 3 millions of items per second (depending on the CPU cache size).
+                   Maybe 3MOps doesn't sound like too big number, but it means ~333 nanosecond spent on a single operation while RAM reference costs
+                   <a href="http://www.eecs.berkeley.edu/~rcs/research/interactive_latency.html" target="_blank">~100 nanoseconds</a>.
+                </p>
+                <p>Cachelot can work as a consistent cache returning an error when out of memory or evict old items to store new.</p>
+              </section>
             </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-2"> <i class="fa fa-database fa-5x"></i> </div>
+            <div class="col-lg-10">
+              <section>
+                <header>
+                  <h3>Distributed Cache Server</h3>
+                  <p>Think Memcached (it is Memcached compatible) but while original <a href="http://memcached.org" target="_blank">Memcached</a> aims to serve hundreds of connections (bandwidth) Cachelot serves tens of them with higher RPS rate (latency).</p>
+                </header>
+                  <p>Another good news: Cachelot is a single-threaded application, so you can run it consuming fewer resources (cheaper VPS hosts can be a huge saving).</p>
+                  <p>And yet single Cachelot instance is faster than Memcached while serving a certain number of connections. Never the less, you're free to scale up horizontally by running more instances.</p>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- row --> 
+  </div>
+</article>
+<!-- container --> 
 
-		<!-- Contact -->
-			<div class="wrapper style4">
-                <article id="contact" class="container 75%">
-                    <header>
-                    <!--
-                        <h2>Get in touch</h2>
-                        <p>If you need any specific features or if you want to know about current development status.</p>
-                    -->
-                    </header>
-                    <div>
-                    <!--
-                        <div class="row">
-                            <div class="12u">
-                                <form method="post" action="#">
-                                    <div>
-                                        <div class="row">
-                                            <div class="6u">
-                                                <input type="text" name="name" id="name" placeholder="Name" />
-                                            </div>
-                                            <div class="6u">
-                                                <input type="email" name="email" id="email" placeholder="Email (promise we don't spam)" />
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="12u">
-                                                <input type="text" name="subject" id="subject" placeholder="Subject" />
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="12u">
-                                                <textarea name="message" id="message" placeholder="Message"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="row 200%">
-                                            <div class="12u">
-                                                <ul class="actions">
-                                                    <li><input type="submit" value="Send Message" /></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    -->
-                        <div class="row">
-                            <div class="12u">
-                                <p>Follow Cachelot on social networks to be aware of recent updates and development process</p>
-                                <ul class="social">
-                                    <!-- <li><a href="#" class="icon fa-rss"><span class="label">RSS</span></a></li> -->
-                                    <li><a href="https://twitter.com/cachelot_io" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-                                    <li><a href="https://www.facebook.com/cachelot.io" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-                                    <li><a href="https://plus.google.com/u/0/112273751748286225217" rel="publisher" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
-                                    <li><a href="https://github.com/cachelot/cachelot" class="icon fa-github"><span class="label">Github</span></a></li>
-                                    <li><a href="http://bitbucket.org/cachelot/cachelot" class="icon fa-bitbucket"><span class="label">Bitbucket</span></a></li>
-                                </ul>
-                                <hr />
-                            </div>
-                        </div>
-                    </div>
-                    <footer>
-                        <ul id="copyright">
-                            <li>&copy; 2015, cachelot.io. All rights reserved.</li>
-                            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-                            <li>Hosted by <a href="https://pages.github.com/">GitHub Pages</a></li>
-                        </ul>
-                    </footer>
-                </article>
-			</div>
+<!-- ==== BENCHMARKS ==== -->
+<article id="benchmarks" name="benchmarks">
+  <div class="container">
+    <div class="row">
+      <h2 class="centered">BENCHMARKS</h2>
+      <hr>
+      <div class="col-lg-8 col-lg-offset-2">
+        <p class="large">Cachelot server performance using the memslap load generator.</p>
+      </div>
+    </div>
+  </div>
+  <!-- row --> 
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div id="read_benchmark"></div>
+      </div>
+      <div class="col-lg-6">
+        <div id="write_benchmark"></div>
+      </div>
+    </div>
+  </div>
+  <!-- row --> 
+  <div class="container">
+    <div class="row">
+      <hr/>
+      <p>The tests were performed on KVM virtual machines.</p>
+      <div class="col-lg-2 col-lg-offset-2">
+        <p><strong>KVM Host:</strong><br/>Eight-core CPU Xeon E3-1240 / 16Gb RAM</p>
+      </div>
+      <div class="col-lg-2 col-lg-offset-1">
+        <p><strong>Cachelot and Memcached VM:</strong><br/>2 vCPU / 2 Gb RAM</p>
+      </div>
+      <div class="col-lg-2 col-lg-offset-1">
+        <p><strong>memslap VM:</strong><br/>4 vCPU / 8 Gb RAM</p>
+      </div>
+      <div class="col-md-8 col-md-offset-2">
+        <p>After running caching server (Cachelot or Memcached), it was warmed up by setting 1,600,000 items. 
+          Then memslap was executed 16 times with the same configuration: number of executions, concurrency, get or set test. 
+          Resulting time is average among all 16 runs.
+        </p>
+        <p>Benchmark source code available in the Cachelot repository</p>
+      </div>
+    </div>
+  </div>
+  <!-- row --> 
+</article>
+<!-- container --> 
 
-	</body>
+<!-- ==== STATUS ==== -->
+<article id="status" name="status">
+  <div class="container">
+    <div class="row">
+      <h2 class="centered">PROJECT STATUS</h2>
+      <hr>
+      <div class="col-lg-8 col-lg-offset-2 centered">
+        <p>Cachelot is still a 'work-in-progress', so there are some features that will be added in the nearest future.</p>
+      </div>
+      <div class="col-lg-8 col-lg-offset-3 centered">
+        <ul class="todo">
+          <li><i class="fa fa-check-square"></i>Full set of Memcached commands: touch, append, prepend, stats</li>
+          <li><i class="fa fa-check-square"></i>Binary protocol and UDP support</li>
+          <li><i class="fa fa-check-square"></i>Library API and documentation</li>
+          <li><i class="fa fa-check-square"></i>No library dependencies except STL</li>
+          <li><i class="fa fa-check-square"></i>Microsoft Windows support</li>
+          <li><i class="fa fa-check-square"></i>Binary and source packages</li>
+          <li><i class="fa fa-check-square"></i>and more ...</li>
+        </ul>
+      </div>
+      <div class="col-lg-8 col-lg-offset-2 cetered">
+        <p class="large">If you think Cachelot lacks important feature, you may open issue on 
+          <a href="https://bitbucket.org/cachelot/cachelot/issues/new" target="_blank">Bitbucket</a> or 
+          <a href="https://github.com/cachelot/cachelot/issues/new" target="_blank">GitHub</a>
+        </p>
+      </div>
+    </div>
+    <!-- /row -->
+  </div>
+</article>
+<!-- /container --> 
+
+<!-- ==== SUBSCRIBE FORM ==== -->
+<article id="subscribe" name="subscribe">
+  <div class="container">
+    <div class="row centered">
+      <div class="col-lg-12 col-xs-12">
+        <!-- Begin MailChimp Signup Form -->
+        <div id="mc_embed_signup">
+        <form action="http://cachelot.us10.list-manage.com/subscribe/post?u=6cc9e3bbd07d0bdf575375947&amp;id=a6d8e7b64f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+          <div id="mc_embed_signup_scroll">
+            <h2>Subscribe to know about new features first</h2>
+            <ul class="actions">
+              <li>
+                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Promise we won't spam" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Promise we won\'t spam'" required />
+              </li>
+              <li>
+                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn altbtn" />
+              </li>
+              <li>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;"><input type="text" name="b_6cc9e3bbd07d0bdf575375947_a6d8e7b64f" tabindex="-1" value=""></div>
+              </li>
+            </ul>
+          </div>
+        </form>
+        </div>
+        <!--End mc_embed_signup-->
+      </div>
+    </div>
+  </div>
+  <!-- row --> 
+</article>
+<!-- container --> 
+
+<!-- Highcharts JavaScript -->
+<script type="text/javascript" src="http://code.highcharts.com/highcharts.js"></script>
+<script type="text/javascript" src="assets/js/benchmarks.js"></script>
+
+</body>
+</html>
+
+  <!-- ==== FOOTER ==== -->
+<article id="footerwrap">
+  <div class="container">
+    <div class="row ceneterd" id="contact">
+      <div class="col-xs-12">
+        <ul class="social">
+          <li>
+            <a href="/feed.xml"><i class="fa fa-rss"></i></a>
+          </li>
+          <li>
+            <a href="https://twitter.com/cachelot_io"><i class="fa fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="https://facebook.com/cachelot.io"><i class="fa fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="https://plus.google.com/+CachelotIo_cache"><i class="fa fa-google-plus"></i></a>
+          </li>
+          <li>
+            <a href="https://bitbucket.org/cachelot/cachelot"><i class="fa fa-bitbucket"></i></a>
+          </li>
+          <li>
+            <a href="https://github.com/cachelot/cachelot"><i class="fa fa-github"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 centered"> <span class="copyright">Copyright &copy; 2015 <a href="#home">www.cachelot.io</a> Design by <a href="http://www.templategarden.com" rel="nofollow">TemplateGarden</a>. Logo design by <a href="https://www.behance.net/arttolstykh">arttolstykh</a></span> </div>
+    </div>
+  </div>
+</article>
+
+<!-- Bootstrap core JavaScript
+    ================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+
+<script type="text/javascript" src="/assets/js/bootstrap.min.js"></script> 
+<script type="text/javascript" src="/assets/js/retina.js"></script> 
+<script type="text/javascript" src="/assets/js/jquery.easing.1.3.js"></script> 
+<script type="text/javascript" src="/assets/js/smoothscroll.js"></script> 
+<script type="text/javascript" src="/assets/js/jquery-func.js"></script>
+
+</body>
 </html>

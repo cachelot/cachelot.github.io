@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cachelot</title>
+    <description>High-performance cache library and distributed caching server.
+</description>
+    <link>http://www.cachelot.io/</link>
+    <atom:link href="http://www.cachelot.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 18 Apr 2015 04:10:27 +0300</pubDate>
+    <lastBuildDate>Sat, 18 Apr 2015 04:10:27 +0300</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Speed-up Your Application by Fine-tuning Memcached</title>
+        <description>&lt;p&gt;Memcached is often being threaten like a zero-configuration system. This isn&amp;#39;t quite true.
+Proper Memcached adoption to the hardware and client applications behavior can significantly improve overall performance.&lt;/p&gt;
+
+&lt;p&gt;Memcached is pretty simple, and there is a handful of statistics. You only need to know a bit of internals to use it. 
+Luckily, it&amp;#39;s not a complicated thing at all.&lt;/p&gt;
+
+&lt;p&gt;As usual, there is no silver bullet. You&amp;#39;re free to experiment. I even encourage you to do this.&lt;/p&gt;
+
+&lt;h2&gt;Stats&lt;/h2&gt;
+
+&lt;p&gt;The starting point of performance tuning is the stats. The easiest way to see stats is to connect to the Memcached server with telnet and run stats in the telnet console.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ telnet localhost 11211
+Connected to localhost.
+Escape character is &amp;#39;^]&amp;#39;.
+telnet&amp;gt; stats
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Command Hits / Misses&lt;/h3&gt;
+
+&lt;p&gt;There are number of hits/misses stats for every command, and these can reveal problems in application behavior. 
+For instance, an application may aggressively cache short-living or rarely used objects, causing a hight rate of misses and evictions. 
+The rule of thumb here is to keep the cache miss ratio close to zero.&lt;/p&gt;
+
+&lt;h3&gt;Evictions&lt;/h3&gt;
+
+&lt;p&gt;One of the most important stats is &lt;code&gt;evictions&lt;/code&gt;. It is the number of non-expired Items that were removed from the cache to free up space for new items.&lt;/p&gt;
+
+&lt;p&gt;A high number of evictions may indicate that applications overuse the cache or that the amount of memory allocated for Items storage is not sufficient. 
+The maximum amount of memory used to store Items can be increased by the -m command-line argument (default value is 64Mb).&lt;/p&gt;
+
+&lt;h3&gt;Connection Yields&lt;/h3&gt;
+
+&lt;p&gt;The number of times when a connection was yielded during batch execution.&lt;/p&gt;
+
+&lt;p&gt;The slowest part of the request execution is the network roundtrip. The application should use batching to achieve maximum performance. 
+Several write requests can be combined into a single network IO operation. Read operations should utilize multi-key requests.&lt;/p&gt;
+
+&lt;p&gt;The downside of using batches is possible connection starvation - the situation when one connection is forced to wait until another finishes its batch. Memcached limits the number of requests per single network IO operation to prevent starvation. Every time a connection tries to execute a batch bigger than this limit; Memcached moves this connection to the back of the processing queue and increments the &lt;code&gt;conn_yields&lt;/code&gt; stat.&lt;/p&gt;
+
+&lt;p&gt;The command-line parameter &lt;code&gt;-R&lt;/code&gt; is in charge of the maximum number of requests per network IO event (default value is 20). The application should adopt its batch size according to this parameter. Please note that the requests limit does not affect multi-key reads, or the number of keys per get request.&lt;/p&gt;
+
+&lt;h2&gt;Other Command-line Arguments&lt;/h2&gt;
+
+&lt;h3&gt;Number of threads&lt;/h3&gt;
+
+&lt;p&gt;The most important setting influenced overall performance: number of threads &lt;code&gt;-t&lt;/code&gt;. The default value of 4 is a good choice for almost every setup.
+Avoid using more than eight threads, it leads to high lock contention inside of Memcached and performance degrade.&lt;/p&gt;
+
+&lt;p&gt;A configuration with a single thread should never be used, even on a single-core machine.&lt;/p&gt;
+
+&lt;h3&gt;Disable use of CAS&lt;/h3&gt;
+
+&lt;p&gt;A compare-and-swap operation of Memcached requires a separate Item field to store unique CAS values. It takes an additional 8 bytes of memory per Item.
+If CAS operation is not used by your application, &lt;code&gt;-C&lt;/code&gt; flag can save some memory.&lt;/p&gt;
+
+&lt;h3&gt;Memcached as In-memory Storage&lt;/h3&gt;
+
+&lt;p&gt;There is &lt;code&gt;-M&lt;/code&gt; argument that tells Memcached to reply with an error when out-of-memory instead of evicting existing items.
+In that way, it&amp;#39;s possible to use Memcached as a consistent in-memory storage.&lt;/p&gt;
+
+&lt;h2&gt;General Advices&lt;/h2&gt;
+
+&lt;p&gt;Use the pool of long-living connections to the server. Memcached is designed to serve many connections simultaneously and with tens of connections you will achieve much better performance.&lt;/p&gt;
+
+&lt;p&gt;Store Items over TCP, retrieve over UDP. As was said: the network transportation is a main source of delays. On a high data volume, TCP packet size overhead can significantly impact overall performance.&lt;/p&gt;
+
+&lt;p&gt;Share your Memcached tips in the comments.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 14 Apr 2015 00:00:00 +0300</pubDate>
+        <link>http://www.cachelot.io/blog/2015/04/14/Speed-up-your-application-by-fine-tuning-Memcached.html</link>
+        <guid isPermaLink="true">http://www.cachelot.io/blog/2015/04/14/Speed-up-your-application-by-fine-tuning-Memcached.html</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+  </channel>
+</rss>
