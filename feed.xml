@@ -6,14 +6,14 @@
 </description>
     <link>http://www.cachelot.io/</link>
     <atom:link href="http://www.cachelot.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 20 Apr 2015 01:27:34 +0300</pubDate>
-    <lastBuildDate>Mon, 20 Apr 2015 01:27:34 +0300</lastBuildDate>
+    <pubDate>Mon, 20 Apr 2015 01:57:17 +0300</pubDate>
+    <lastBuildDate>Mon, 20 Apr 2015 01:57:17 +0300</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
         <title>Speed-up Your Application by Fine-tuning Memcached</title>
         <description>&lt;p&gt;Memcached is often being threaten like a zero-configuration system. This isn&amp;#39;t quite true.
-Proper Memcached adoption to the hardware and client applications behavior can significantly improve overall performance.&lt;/p&gt;
+Proper adoption to the hardware and client applications behavior can significantly improve overall performance.&lt;/p&gt;
 
 &lt;p&gt;Memcached is pretty simple, and there is a handful of statistics. You only need to know a bit of internals to use it. 
 Luckily, it&amp;#39;s not a complicated thing at all.&lt;/p&gt;
@@ -22,11 +22,25 @@ Luckily, it&amp;#39;s not a complicated thing at all.&lt;/p&gt;
 
 &lt;h2&gt;Stats&lt;/h2&gt;
 
-&lt;p&gt;The starting point of performance tuning is the stats. The easiest way to see stats is to connect to the Memcached server with telnet and run stats in the telnet console.&lt;/p&gt;
+&lt;p&gt;The starting point of performance tuning is the stats. The easiest way to see stats is to connect to the Memcached server with telnet and run &lt;code&gt;stats&lt;/code&gt; in the telnet console.&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ telnet localhost 11211
 Connected to localhost.
 Escape character is &amp;#39;^]&amp;#39;.
 telnet&amp;gt; stats
+
+STAT pid 12950
+STAT uptime 55
+STAT time 1429483226
+STAT version 1.4.15
+STAT libevent 2.0.21-stable
+STAT pointer_size 64
+STAT rusage_user 4.758163
+STAT rusage_system 8.206732
+STAT curr_connections 10
+STAT total_connections 123
+STAT connection_structures 42
+STAT reserved_fds 20
+...
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;Command Hits / Misses&lt;/h3&gt;
 
@@ -79,9 +93,9 @@ In that way, it&amp;#39;s possible to use Memcached as a consistent in-memory st
 
 &lt;h4&gt;&lt;em&gt;Share your Memcached tips in the comments.&lt;/em&gt;&lt;/h4&gt;
 </description>
-        <pubDate>Tue, 14 Apr 2015 00:00:00 +0300</pubDate>
-        <link>http://www.cachelot.io/blog/2015/04/14/Speed-up-your-application-by-fine-tuning-Memcached.html</link>
-        <guid isPermaLink="true">http://www.cachelot.io/blog/2015/04/14/Speed-up-your-application-by-fine-tuning-Memcached.html</guid>
+        <pubDate>Mon, 20 Apr 2015 00:00:00 +0300</pubDate>
+        <link>http://www.cachelot.io/blog/2015/04/20/Speed-up-your-application-by-fine-tuning-Memcached.html</link>
+        <guid isPermaLink="true">http://www.cachelot.io/blog/2015/04/20/Speed-up-your-application-by-fine-tuning-Memcached.html</guid>
         
         
         <category>blog</category>
