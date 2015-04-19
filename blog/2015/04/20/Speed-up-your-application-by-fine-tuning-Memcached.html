@@ -7,8 +7,8 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="description" content="Cachelot - high performance cache library and caching server" />
 <meta name="keywords" content="Cachelot, cache, Memcached, distributed cache, high-performance, C++" />
-<meta name="description" content="Memcached is often being threaten like a zero-configuration system. This isn&#39;t quite true.Proper Memcached adoption to the hardware and client applicatio..." />
-<link rel="canonical" href="http://www.cachelot.io/blog/2015/04/14/Speed-up-your-application-by-fine-tuning-Memcached.html">
+<meta name="description" content="Memcached is often being threaten like a zero-configuration system. This isn&#39;t quite true.Proper adoption to the hardware and client applications behavio..." />
+<link rel="canonical" href="http://www.cachelot.io/blog/2015/04/20/Speed-up-your-application-by-fine-tuning-Memcached.html">
 <link rel="alternate" type="application/rss+xml" title="Cachelot" href="http://www.cachelot.io/feed.xml" />
 
 <!-- favicon -->
@@ -66,17 +66,17 @@
   </div>
   <div class="container">
   <div class="row">
-    <div class="col-lg-8 col-lg-offset-2 col-xs-12 post">
+    <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-xs-12 post">
 <!-- Header -->
       <header class="post-header centered">
         <h1 class="post-title">Speed-up Your Application by Fine-tuning Memcached</h1>
-        <p class="post-meta">Apr 14, 2015</p>
+        <p class="post-meta">Apr 20, 2015</p>
         <img class="title-image" src="/assets/img/blog/fine-tuning-memcached.jpg" alt="Speed-up Your Application by Fine-tuning Memcached" />
       </header>
 <!-- Content -->
       <article class="post-content">
         <p>Memcached is often being threaten like a zero-configuration system. This isn&#39;t quite true.
-Proper Memcached adoption to the hardware and client applications behavior can significantly improve overall performance.</p>
+Proper adoption to the hardware and client applications behavior can significantly improve overall performance.</p>
 
 <p>Memcached is pretty simple, and there is a handful of statistics. You only need to know a bit of internals to use it. 
 Luckily, it&#39;s not a complicated thing at all.</p>
@@ -85,11 +85,25 @@ Luckily, it&#39;s not a complicated thing at all.</p>
 
 <h2>Stats</h2>
 
-<p>The starting point of performance tuning is the stats. The easiest way to see stats is to connect to the Memcached server with telnet and run stats in the telnet console.</p>
+<p>The starting point of performance tuning is the stats. The easiest way to see stats is to connect to the Memcached server with telnet and run <code>stats</code> in the telnet console.</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$ telnet localhost 11211
 Connected to localhost.
 Escape character is &#39;^]&#39;.
 telnet&gt; stats
+
+STAT pid 12950
+STAT uptime 55
+STAT time 1429483226
+STAT version 1.4.15
+STAT libevent 2.0.21-stable
+STAT pointer_size 64
+STAT rusage_user 4.758163
+STAT rusage_system 8.206732
+STAT curr_connections 10
+STAT total_connections 123
+STAT connection_structures 42
+STAT reserved_fds 20
+...
 </code></pre></div>
 <h3>Command Hits / Misses</h3>
 
@@ -152,7 +166,7 @@ In that way, it&#39;s possible to use Memcached as a consistent in-memory storag
         <!-- Google+ -->
         <li><div class="g-plus" data-action="share" data-annotation="bubble"></div></li>
         <!-- Facebook -->
-        <li><div class="fb-share-button" data-href="/blog/2015/04/14/Speed-up-your-application-by-fine-tuning-Memcached.html" data-layout="button_count"></div></li>
+        <li><div class="fb-share-button" data-href="/blog/2015/04/20/Speed-up-your-application-by-fine-tuning-Memcached.html" data-layout="button_count"></div></li>
         <!-- Twitter -->
         <li><a href="https://twitter.com/share" class="twitter-share-button" data-via="cachelot_io">Tweet</a></li>
       </ul>
