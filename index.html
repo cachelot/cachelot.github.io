@@ -115,14 +115,15 @@
               <section>
                 <header>
                   <h3>Cachelot Library</h3>
-                  <p>If your application needs to cache some data and retrieve it from the cache with a speed of light, the only way is to store data right into application's memory. That's what cachelot library is.</p>
+                  <p>If your application needs to cache data and retrieve it from the cache at the speed of light, the only way to do so is to store data right into the application's memory. That's what the Cachelot library is.</p>
                 </header>
-                <p>One library with the simple interface. All you need is to provide fixed amount of memory for the cache and access or store 3 millions of items per second (depending on the CPU cache size).
-                   Maybe 3MOps doesn't sound like too big number, but it means ~333 nanosecond spent on a single operation while RAM reference costs
-                   <a href="http://www.eecs.berkeley.edu/~rcs/research/interactive_latency.html" target="_blank">~100 nanoseconds</a>.
+                <p>The library works within a limited amount of memory. In fact, the user is responsible for providing memory range for the cache. For instance, it can have a battery-protected memory.</p>
+                <p>Besides memory management, Cachelot ensures smooth responsiveness, without any "gaps" for both read and write operations.</p>
+                <p>Cachelot can work as a consistent cache, returning an error when out of memory or evicting old items to free space for new ones.</p>
+                <p>The code is written in C++ in a hardware-friendly manner.</p>
+                <p>All this allows you to store and access three million items per second (depending on the CPU cache size). 
+                   Maybe 3MOPs doesn't sound like such a large number, but it means ~333 nanoseconds are spent on a single operation, while RAM reference costs are at <a href="http://www.eecs.berkeley.edu/~rcs/research/interactive_latency.html" target="_blank">~100 nanoseconds</a>.
                 </p>
-
-                <p>Cachelot can work as a consistent cache returning an error when out of memory or evict old items to store new.</p>
               </section>
             </div>
           </div> <!-- row --> 
@@ -134,10 +135,12 @@
               <section>
                 <header>
                   <h3>Distributed Cache Server</h3>
-                  <p>Think Memcached (it is Memcached compatible) but while original <a href="http://memcached.org" target="_blank">Memcached</a> aims to serve hundreds of connections (bandwidth) Cachelot serves tens of them with higher RPS rate (latency).</p>
+                  <p>Think of <a href="http://memcached.org" target="_blank">Memcached</a> (Cachelot server is Memcached-compatible) but while the former aims to serve hundreds of simultaneous connections, achieving maximum bandwidth, 
+                     the latter serves tens of them, achieving minimal latency.
+                  </p>
                 </header>
-                  <p>Another good news: Cachelot is a single-threaded application, so you can run it consuming fewer resources (cheaper VPS hosts can be a huge saving).</p>
-                  <p>And yet single Cachelot instance is faster than Memcached while serving a certain number of connections. Never the less, you're free to scale up horizontally by running more instances.</p>
+                  <p>Cachelot is single-threaded, so you can run it while consuming fewer resources (getting cheaper VPS hosts can lead to huge savings). It also stores less metadata per Item, and thus Cachelot better utilizes precious RAM.</p>
+                  <p>And yet, single Cachelot instance is faster than Memcached while serving a certain number of connections. Never the less, you're free to scale up horizontally by running more instances.</p>
               </section>
             </div>
           </div> <!-- row --> 
@@ -185,7 +188,7 @@
         <p><strong>memslap VM:</strong><br/>4 vCPU / 8 Gb RAM</p>
       </div>
       <div class="col-md-8 col-md-offset-2">
-        <p>After running caching server (Cachelot or Memcached), it was warmed up by setting 1,600,000 items. 
+        <p>After running a caching server (Cachelot or Memcached), it was warmed up by setting up 1,600,000 items. 
           Then memslap was executed 16 times with the same configuration: number of executions, concurrency, get or set test. 
           Resulting time is average among all 16 runs.
         </p>
