@@ -6,9 +6,9 @@
 </description>
     <link>http://www.cachelot.io/</link>
     <atom:link href="http://www.cachelot.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 03 Jun 2015 23:53:48 +0300</pubDate>
-    <lastBuildDate>Wed, 03 Jun 2015 23:53:48 +0300</lastBuildDate>
-    <generator>Jekyll v2.5.3</generator>
+    <pubDate>Mon, 28 Mar 2016 00:15:34 +0200</pubDate>
+    <lastBuildDate>Mon, 28 Mar 2016 00:15:34 +0200</lastBuildDate>
+    <generator>Jekyll v3.1.2</generator>
     
       <item>
         <title>Why We Should Stop Working on Pet Projects</title>
@@ -138,7 +138,7 @@ When it comes to personal projects, role of MVP is a bit different. Having a via
 
 &lt;h4&gt;If you have some tips on personal project management, please share them in the comments.&lt;/h4&gt;
 </description>
-        <pubDate>Wed, 29 Apr 2015 00:00:00 +0300</pubDate>
+        <pubDate>Wed, 29 Apr 2015 00:00:00 +0200</pubDate>
         <link>http://www.cachelot.io/blog/2015/04/29/Why-We-Should-Stop-Working-on-Pet-Projects.html</link>
         <guid isPermaLink="true">http://www.cachelot.io/blog/2015/04/29/Why-We-Should-Stop-Working-on-Pet-Projects.html</guid>
         
@@ -160,9 +160,9 @@ Luckily, it&amp;#39;s not a complicated thing at all.&lt;/p&gt;
 &lt;h2&gt;Stats&lt;/h2&gt;
 
 &lt;p&gt;The starting point of performance tuning is the stats. The easiest way to see stats is to connect to the Memcached server with telnet and run &lt;code&gt;stats&lt;/code&gt; in the telnet console.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ telnet localhost 11211
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;$ telnet localhost 11211
 Connected to localhost.
-Escape character is &amp;#39;^]&amp;#39;.
+Escape character is &#39;^]&#39;.
 telnet&amp;gt; stats
 
 STAT pid 12950
@@ -230,7 +230,7 @@ In that way, it&amp;#39;s possible to use Memcached as a consistent in-memory st
 
 &lt;h4&gt;&lt;em&gt;Share your Memcached tips in the comments.&lt;/em&gt;&lt;/h4&gt;
 </description>
-        <pubDate>Mon, 20 Apr 2015 00:00:00 +0300</pubDate>
+        <pubDate>Mon, 20 Apr 2015 00:00:00 +0200</pubDate>
         <link>http://www.cachelot.io/blog/2015/04/20/Speed-up-your-application-by-fine-tuning-Memcached.html</link>
         <guid isPermaLink="true">http://www.cachelot.io/blog/2015/04/20/Speed-up-your-application-by-fine-tuning-Memcached.html</guid>
         

@@ -18,19 +18,20 @@
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
-<!-- Font Awesome -->
-<link href="/assets/css/font-awesome.min.css" rel="stylesheet">
-
 <!-- Custom CSS -->
 <link href="/assets/css/main.css" rel="stylesheet">
 
 <!-- Fonts -->
 <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Raleway:300,400,700' rel='stylesheet' type='text/css'>
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-<!-- Javascript -->
-<script src="/assets/js/jquery.min.js"></script>
-<script type="text/javascript" src="/assets/js/modernizr.custom.js"></script>
+<!-- Core Javascript -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/assets/js/smoothscroll.js"></script>
+
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -57,27 +58,27 @@
   <div id="navbar-main"> 
     <!-- Fixed navbar -->
 <div class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
+  <div class="container navbar-header">
+    <div>
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a href="/index.html" class="navbar-brand smoothScroll"><span class="cachelot">cachelot</span><span class="io">.io</span></a>
+      <a href="/index.html" class="navbar-brand smoothScroll"><span id="logo_cachelot">cachelot</span><span id="logo_io">.io</span></a>
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right" id="nav">
         <li><a href="http://blog.cachelot.io">Blog</a></li>
         <li><a class="smoothScroll" href="/index.html#about">About</a></li>
         <li><a class="smoothScroll" href="/index.html#benchmarks">Benchmarks</a></li>
-        <li><a class="smoothScroll" href="/index.html#status">Status</a></li>
-        <li><a class="smoothScroll" href="/index.html#contact">Contact</a></li>
-        <li><a href="/license.txt">License</a></li>
+        <li><a class="smoothScroll" href="/index.html#social">Social</a></li>
+        <li><a href="/license.html" target="_blank">License</a></li>
       </ul>
     </div>
-    <!--/.nav-collapse --> 
+    <!--/.nav-collapse -->
   </div>
 </div>
 
   </div>
-  <div class="container">
+  <div id="contentwrap">
+    <div class="container">
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-xs-12 post">
 <!-- Header -->
@@ -265,52 +266,42 @@ When it comes to personal projects, role of MVP is a bit different. Having a via
 </script>
 
 
-  <!-- ==== FOOTER ==== -->
+  </div>
+  
+<!-- ==== FOOTER ==== -->
 <div id="footerwrap">
   <div class="container">
-    <div class="row centered" id="contact">
-      <div class="col-xs-12">
-        <ul class="social">
-          <li>
-            <a href="/feed.xml"><i class="fa fa-rss"></i></a>
-          </li>
-          <li>
-            <a href="https://twitter.com/cachelot_io"><i class="fa fa-twitter"></i></a>
-          </li>
-          <li>
-            <a href="https://facebook.com/cachelot.io"><i class="fa fa-facebook"></i></a>
-          </li>
-          <li>
-            <a href="https://plus.google.com/+CachelotIo_cache"><i class="fa fa-google-plus"></i></a>
-          </li>
-          <li>
-            <a href="https://bitbucket.org/cachelot/cachelot"><i class="fa fa-bitbucket"></i></a>
-          </li>
-          <li>
-            <a href="https://github.com/cachelot/cachelot"><i class="fa fa-github"></i></a>
-          </li>
-        </ul>
-      </div>
+    <div class="row">
+      <!-- Social media buttons -->
+      <ul class="col-xs-12" id="social-buttons">
+        <li>
+          <a href="/feed.xml"><i class="fa fa-rss"></i></a>
+        </li>
+        <li>
+          <a href="https://facebook.com/cachelot.io"><i class="fa fa-facebook"></i></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/cachelot_io"><i class="fa fa-twitter"></i></a>
+        </li>
+        <li>
+          <a href="https://plus.google.com/+CachelotIo_cache"><i class="fa fa-google-plus"></i></a>
+        </li>
+        <li>
+          <a href="https://github.com/cachelot/cachelot"><i class="fa fa-github"></i></a>
+        </li>
+      </ul>
+      <hr/>
     </div>
     <div class="row">
-      <div class="col-md-12 centered"> 
-        <span class="copyright">Copyright &copy; 2015 <a href="#home">www.cachelot.io</a>. 
+      <div class="col-md-12 centered">
+        <span class="copyright">Copyright &copy; 2015 <a href="#home">www.cachelot.io</a>.
                                 Logo design by <a href="https://www.behance.net/arttolstykh">arttolstykh</a>.
-                                Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span> 
+                                Hosted by <a href="https://pages.github.com/">GitHub Pages</a></span>
       </div>
     </div> <!-- row -->
-  </div>
+  </div> <!-- container -->
 </div>
-
-<!-- Bootstrap core JavaScript
-    ================================================== --> 
-<!-- Placed at the end of the document so the pages load faster --> 
-
-<script type="text/javascript" src="/assets/js/bootstrap.min.js"></script> 
-<script type="text/javascript" src="/assets/js/retina.js"></script> 
-<script type="text/javascript" src="/assets/js/jquery.easing.1.3.js"></script> 
-<script type="text/javascript" src="/assets/js/smoothscroll.js"></script> 
-<script type="text/javascript" src="/assets/js/jquery-func.js"></script>
 
 </body>
 </html>
+
