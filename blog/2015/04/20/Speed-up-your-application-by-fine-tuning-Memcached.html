@@ -55,17 +55,17 @@
 
 </head>
 <body data-spy="scroll" data-offset="0" data-target="#navbar-main">
-  <div id="navbar-main"> 
+  <div id="navbar-main">
     <!-- Fixed navbar -->
 <div class="navbar navbar-inverse navbar-fixed-top">
   <div class="container navbar-header">
     <div>
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a href="/index.html" class="navbar-brand smoothScroll"><span id="logo_cachelot">cachelot</span><span id="logo_io">.io</span></a>
+      <a href="/index.html#contentwrap" class="navbar-brand smoothScroll"><span id="logo_cachelot">cachelot</span><span id="logo_io">.io</span></a>
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right" id="nav">
-        <li><a href="http://blog.cachelot.io">Blog</a></li>
+        <li><a href="/blog/index.html">Blog</a></li>
         <li><a class="smoothScroll" href="/index.html#about">About</a></li>
         <li><a class="smoothScroll" href="/index.html#benchmarks">Benchmarks</a></li>
         <li><a class="smoothScroll" href="/index.html#social">Social</a></li>
@@ -74,6 +74,25 @@
     </div>
     <!--/.nav-collapse -->
   </div>
+</div>
+
+  </div>
+  <div id="headerwrap">
+    <div class="clearfix">
+  <img src="/assets/img/logo.png" alt="Awesome Cachelot Logo" width="256" height="256" />
+  <section>
+    <header>
+      <h3>Lightning-fast LRU cache library and memory efficient key-value server.</h3>
+      <p>Cachelot is free and open source.<br />
+         Distributed under the terms of Simplified BSD License</p>
+    </header>
+    <footer class="centered">
+      <ul class="actions">
+        <li><a href="https://github.com/cachelot/cachelot" class="altbtn"><i class="fa fa-github"></i>GitHub</a></li>
+        <li><a href="#contentwrap" class="smoothScroll btn"><i class="fa fa-caret-down"></i>Continue Read</a></li>
+      </ul>
+    </footer>
+  </section>
 </div>
 
   </div>
@@ -183,6 +202,9 @@ In that way, it&#39;s possible to use Memcached as a consistent in-memory storag
         <li><div class="fb-share-button" data-href="/blog/2015/04/20/Speed-up-your-application-by-fine-tuning-Memcached.html" data-layout="button_count"></div></li>
         <!-- Twitter -->
         <li><a href="https://twitter.com/share" class="twitter-share-button" data-via="cachelot_io">Tweet</a></li>
+        <!-- LinkedIn -->
+        <li><script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+            <script type="IN/Share" data-counter="right"></script></li>
       </ul>
     </div>
   </div> <!-- row -->
@@ -195,21 +217,6 @@ In that way, it&#39;s possible to use Memcached as a consistent in-memory storag
   </div> <!-- row -->
 </div>
 
-<!-- scripts section -->
-
-  <!-- Facebook -->
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-  <!-- Twitter -->
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-  <!-- Google+ -->
-<script src="https://apis.google.com/js/platform.js" async defer></script>
   <!-- Disqus -->
 <script type="text/javascript">
   var disqus_shortname = 'cachelot';
@@ -256,6 +263,23 @@ In that way, it&#39;s possible to use Memcached as a consistent in-memory storag
     </div> <!-- row -->
   </div> <!-- container -->
 </div>
+
+<!-- Script section at the end to speedup page loading
+    ================================================== -->
+<!-- Facebook -->
+<div id="fb-root"></div>
+<script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- Twitter -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<!-- Google+ -->
+<script src="https://apis.google.com/js/platform.js" async defer></script>
 
 </body>
 </html>

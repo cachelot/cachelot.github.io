@@ -7,7 +7,7 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="description" content="Cachelot - high performance cache library and caching server" />
 <meta name="keywords" content="Cachelot, cache, Memcached, distributed cache, high-performance, C++" />
-<meta name="description" content="High-performance cache library and distributed caching server.
+<meta name="description" content="High-performance LRU cache library and memory efficient key-value server
 " />
 <link rel="canonical" href="http://www.cachelot.io/">
 <link rel="alternate" type="application/rss+xml" title="Cachelot" href="http://www.cachelot.io/feed.xml" />
@@ -56,17 +56,17 @@
 
 </head>
 <body data-spy="scroll" data-offset="0" data-target="#navbar-main">
-  <div id="navbar-main"> 
+  <div id="navbar-main">
     <!-- Fixed navbar -->
 <div class="navbar navbar-inverse navbar-fixed-top">
   <div class="container navbar-header">
     <div>
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a href="/index.html" class="navbar-brand smoothScroll"><span id="logo_cachelot">cachelot</span><span id="logo_io">.io</span></a>
+      <a href="/index.html#contentwrap" class="navbar-brand smoothScroll"><span id="logo_cachelot">cachelot</span><span id="logo_io">.io</span></a>
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right" id="nav">
-        <li><a href="http://blog.cachelot.io">Blog</a></li>
+        <li><a href="/blog/index.html">Blog</a></li>
         <li><a class="smoothScroll" href="/index.html#about">About</a></li>
         <li><a class="smoothScroll" href="/index.html#benchmarks">Benchmarks</a></li>
         <li><a class="smoothScroll" href="/index.html#social">Social</a></li>
@@ -78,31 +78,27 @@
 </div>
 
   </div>
-  <div id="contentwrap">
-    <!-- ==== HEADERWRAP ==== -->
-<div id="headerwrap">
-  <div class="clearfix">
-    <img src="assets/img/logo.png" alt="Awesome Cachelot Logo" width="256" height="256" />
-    <section>
-      <header>
-        <h3>Lightning-fast LRU cache library and memory efficient object storage server.</h3>
-        <p>Speaks Memcached protocol.</p>
-        <p>Cachelot is free and open source.<br />
-           Distributed under the terms of Simplified BSD License
-        </p>
-      </header>
-      <footer class="centered">
-        <ul class="actions">
-          <li><a href="https://github.com/cachelot/cachelot" class="altbtn"><i class="fa fa-github"></i>GitHub</a></li>
-          <li><a href="#about" class="smoothScroll btn"><i class="fa fa-caret-down"></i>Learn More</a></li>
-        </ul>
-      </footer>
-    </section>
-  </div>
+  <div id="headerwrap">
+    <div class="clearfix">
+  <img src="/assets/img/logo.png" alt="Awesome Cachelot Logo" width="256" height="256" />
+  <section>
+    <header>
+      <h3>Lightning-fast LRU cache library and memory efficient key-value server.</h3>
+      <p>Cachelot is free and open source.<br />
+         Distributed under the terms of Simplified BSD License</p>
+    </header>
+    <footer class="centered">
+      <ul class="actions">
+        <li><a href="https://github.com/cachelot/cachelot" class="altbtn"><i class="fa fa-github"></i>GitHub</a></li>
+        <li><a href="#contentwrap" class="smoothScroll btn"><i class="fa fa-caret-down"></i>Continue Read</a></li>
+      </ul>
+    </footer>
+  </section>
 </div>
-<!-- /headerwrap -->
 
-<!-- ==== ABOUT ==== -->
+  </div>
+  <div id="contentwrap">
+    <!-- ==== ABOUT ==== -->
 <div id="about">
   <div class="container">
     <div class="row white">
@@ -244,17 +240,6 @@
 <!-- Highcharts JavaScript -->
 <script type="text/javascript" src="http://code.highcharts.com/highcharts.js"></script>
 <script type="text/javascript" src="assets/js/benchmarks.js"></script>
-<!-- Facebook SDK
-    ================================================== -->
-<div id="fb-root"></div>
-<script>(function (d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s);
-  js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
 
   </div>
   
@@ -291,6 +276,23 @@
     </div> <!-- row -->
   </div> <!-- container -->
 </div>
+
+<!-- Script section at the end to speedup page loading
+    ================================================== -->
+<!-- Facebook -->
+<div id="fb-root"></div>
+<script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- Twitter -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<!-- Google+ -->
+<script src="https://apis.google.com/js/platform.js" async defer></script>
 
 </body>
 </html>
