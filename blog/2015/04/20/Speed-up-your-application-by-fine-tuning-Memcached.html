@@ -54,7 +54,8 @@
 
 
 </head>
-<body data-spy="scroll" data-offset="0" data-target=".navbar">
+<!--<body data-spy="scroll" data-offset="0" data-target=".navbar">-->
+<body>
   <div id="navbar-main">
     <!-- Fixed navbar -->
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -89,7 +90,7 @@
     <footer class="centered">
       <ul class="actions">
         <li><a href="https://github.com/cachelot/cachelot" class="altbtn"><i class="fa fa-github"></i>GitHub</a></li>
-        <li><a href="#contentwrap" class="smoothScroll btn"><i class="fa fa-caret-down"></i>Continue Read</a></li>
+        <li><a href="#contentwrap" class="smoothScroll btn"><i class="fa fa-caret-down"></i>Continue</a></li>
       </ul>
     </footer>
   </section>
@@ -235,22 +236,12 @@ In that way, it&#39;s possible to use Memcached as a consistent in-memory storag
   <div class="container">
     <div class="row">
       <!-- Social media buttons -->
-      <ul class="col-xs-12" id="social-buttons">
-        <li>
-          <a href="/feed.xml"><i class="fa fa-rss"></i></a>
-        </li>
-        <li>
-          <a href="https://facebook.com/cachelot.io"><i class="fa fa-facebook"></i></a>
-        </li>
-        <li>
-          <a href="https://twitter.com/cachelot_io"><i class="fa fa-twitter"></i></a>
-        </li>
-        <li>
-          <a href="https://plus.google.com/+CachelotIo_cache"><i class="fa fa-google-plus"></i></a>
-        </li>
-        <li>
-          <a href="https://github.com/cachelot/cachelot"><i class="fa fa-github"></i></a>
-        </li>
+      <ul>
+        <li><a href="/feed.xml"><i class="fa fa-rss"></i></a></li>
+        <li><a href="https://facebook.com/cachelot.io"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://twitter.com/cachelot_io"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="https://plus.google.com/+CachelotIo_cache"><i class="fa fa-google-plus"></i></a></li>
+        <li><a href="https://github.com/cachelot/cachelot"><i class="fa fa-github"></i></a></li>
       </ul>
       <hr/>
     </div>
@@ -280,6 +271,7 @@ In that way, it&#39;s possible to use Memcached as a consistent in-memory storag
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 <!-- Google+ -->
 <script src="https://apis.google.com/js/platform.js" async defer></script>
+
 
 </body>
 </html>
