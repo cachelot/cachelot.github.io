@@ -63,7 +63,7 @@
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a href="#" class="navbar-brand smoothScroll"><span id="logo_cachelot">cachelot</span><span id="logo_io">.io</span></a>
+      <a href="http://www.cachelot.io" class="navbar-brand smoothScroll"><span id="logo_cachelot">cachelot</span><span id="logo_io">.io</span></a>
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right" id="nav">
@@ -71,7 +71,7 @@
         <li><a class="smoothScroll" href="/index.html#about">About</a></li>
         <li><a class="smoothScroll" href="/index.html#benchmarks">Benchmarks</a></li>
         <li><a class="smoothScroll" href="/index.html#social">Social</a></li>
-        <li><a href="/license.html" target="_blank">License</a></li>
+        <li><a href="/license.txt" target="_blank">License</a></li>
       </ul>
     </div>
     <!--/.nav-collapse -->
@@ -91,11 +91,12 @@
     <footer class="centered">
       <ul class="actions">
         <li><a href="https://github.com/cachelot/cachelot" class="altbtn"><i class="fa fa-github"></i>GitHub</a></li>
-        <li><a href="#contentwrap" class="smoothScroll btn"><i class="fa fa-caret-down"></i>Continue</a></li>
+        <li><a href="#top" class="smoothScroll btn"><i class="fa fa-caret-down"></i>Continue</a></li>
       </ul>
     </footer>
   </section>
 </div>
+<div id="top"><!-- Target for scrolling --></div>
 
   </div>
   <div id="contentwrap">
@@ -112,16 +113,19 @@
             <div class="col-md-10">
               <section>
                 <header>
-                  <h3>Cachelot Library</h3>
-                  <p>If your application needs to cache data and retrieve it from the cache at the speed of light, the only way to do so is to store data right into the application's memory. That's what the Cachelot library is.</p>
+                  <h3>Cachelot LRU cache Library</h3>
+                  <p>If your application needs an LRU cache that works at the speed of light. That's what the Cachelot library is.</p>
                 </header>
-                <p>The library works within a fixed amount of memory. In fact, the user is responsible for providing memory range for the cache. For instance, it can be a battery-protected or mapped memory.</p>
+                <p>The library works within a fixed amount of memory. No garbage collector. Small metadata, near perfect memory utilization (overhead is 5-7% of the total memory).</p>
                 <p>Besides memory management, Cachelot ensures smooth responsiveness, without any "gaps" for both read and write operations.</p>
                 <p>Cachelot can work as a consistent cache, returning an error when out of memory or evicting old items to free space for new ones.</p>
-                <p>The code is written in C++ in a hardware-friendly manner.</p>
+                <p>The code is written in C++ and it is highly optimized. You can use cachelot on platforms with limited resources, like IoT devices or handheld.</p>
                 <p>All this allows you to store and access three million items per second (depending on the CPU cache size).
                    Maybe 3MOPs doesn't sound like such a large number, but it means ~333 nanoseconds are spent on a single operation, while RAM reference cost is at <a href="http://www.eecs.berkeley.edu/~rcs/research/interactive_latency.html" target="_blank">~100 nanoseconds</a>.
+                   Only 3 RAM reference per request, can you compete with that?
                 </p>
+                <p>There are benchmarks inside of repo; we encourage you to try them for yourself.</p>
+                <p>It is possible to create bindings and use Cachelot from your programming language of choice: JS, Python, Go, Java, Ruby, Erlang, etc.</p>
               </section>
             </div>
           </div> <!-- row -->
@@ -132,13 +136,12 @@
             <div class="col-md-10">
               <section>
                 <header>
-                  <h3>Distributed Cache Server</h3>
-                  <p>Think of <a href="http://memcached.org" target="_blank">Memcached</a> (Cachelot server is Memcached-compatible) but while the former aims to serve hundreds of simultaneous connections, achieving maximum bandwidth,
-                     the latter serves tens of them, achieving minimal latency.
+                  <h3>Distributed Caching Server</h3>
+                  <p>Think of <a href="http://memcached.org" target="_blank">Memcached</a> (Cachelot server is Memcached-compatible) but while the former aims to serve hundreds of simultaneous connections, achieving maximum bandwidth, the latter serves tens of them, achieving the maximal hardware utilization and minimal latency.
                   </p>
                 </header>
-                  <p>Cachelot is single-threaded, so you can run it while consuming fewer resources (getting cheaper VPS hosts can lead to huge savings). It also stores less metadata per Item, and thus better utilizes precious RAM.</p>
-                  <p>And yet, single Cachelot instance is faster than Memcached while serving a certain number of connections. Never the less, you're free to scale up horizontally by running more instances.</p>
+                  <p>Cachelot is single-threaded, thus is able to utilize 99% CPU; it also allows to store much more items in the same amount of RAM (up to 15% RAM saving, depending on the data and store patterns)</p>
+                  <p>And yet, single Cachelot instance is faster than Memcached while serving a certain number of connections. Never the less, you're free to scale up horizontally by running instance per CPU core.</p>
               </section>
             </div>
           </div> <!-- row -->
@@ -155,81 +158,77 @@
     <div class="row">
       <h2>BENCHMARKS</h2>
       <hr>
+      <noscript><h4>Benchmark charts require JavaScript</h4></noscript>
       <div class="col-md-8 col-md-offset-2">
-        <p class="large">Cachelot server performance using the memslap load generator.</p>
+        <h4>Cachelot memory utilization.</h4>
+        <section>
+          <h5>Benchmark setup.</h5>
+          <p>The script creates 2Gb random keys and values of pre-defined range (like 1 to 4 kilobytes).</p>
+          <p>Cachelot and Memcached were instructed to use no more than 2Gb. Then same dataset used to fill both caching systems, after each run dataset shuffles.</p>
+          <p>The <i>effective memory</i> means the total size of all keys and values that have survived in the cache.</p>
+          <p>Benchmark source code available <a href="https://github.com/cachelot/cachelot/blob/master/test/memory_consumption.py" target="_blank">here</a>.</p>
+        </section>
       </div>
-    </div>
+    </div> <!-- end of row -->
   </div>
-  <!-- row -->
-  <div class="container">
+  <div class="container" id="benchmark_charts">
     <div class="row">
-      <div class="col-md-6">
-        <div id="read_benchmark"></div>
+      <div class="col-md-6 col-sm-12">
+        <div id="chart_small"></div>
       </div>
-      <div class="col-md-6">
-        <div id="write_benchmark"></div>
+      <div class="col-md-6 col-sm-12">
+        <div id="chart_medium"></div>
       </div>
-    </div>
+      <div class="col-md-6 col-sm-12">
+        <div id="chart_large"></div>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <div id="chart_all"></div>
+      </div>
+    </div> <!-- end of row -->
   </div>
-  <!-- row -->
-  <div class="container">
-    <div class="row">
-      <hr/>
-      <p>The tests were performed on KVM virtual machines.</p>
-      <div class="col-md-2 col-md-offset-2">
-        <p><strong>KVM Host:</strong><br/>Eight-core CPU Xeon E3-1240 / 16Gb RAM</p>
-      </div>
-      <div class="col-md-2 col-md-offset-1">
-        <p><strong>Cachelot and Memcached VM:</strong><br/>2 vCPU / 2 Gb RAM</p>
-      </div>
-      <div class="col-md-2 col-md-offset-1">
-        <p><strong>memslap VM:</strong><br/>4 vCPU / 8 Gb RAM</p>
-      </div>
-      <div class="col-md-8 col-md-offset-2">
-        <p>After running a caching server (Cachelot or Memcached), it was warmed up by setting up 1,600,000 items.
-          Then memslap was executed 16 times with the same configuration: number of executions, concurrency, get or set test.
-          Resulting time is average among all 16 runs.
-        </p>
-        <p>Benchmark source code available in the Cachelot repository</p>
-      </div>
-    </div>
-  </div>
-  <!-- row -->
+
 </div>
 <!-- container -->
+<!-- Highcharts JavaScript -->
+<script type="text/javascript" src="http://code.highcharts.com/highcharts.js"></script>
+<script type="text/javascript" src="assets/js/benchmarks.js"></script>
+<!-- end of: Highcharts JavaScript -->
 
 <!-- ==== SOCIAL ==== -->
 <div id="social">
   <div class="container">
     <div class="row centered">
         <header class="centered">
-            <h2>CACHELOT IS SOCIAL</h2> <hr />
+            <h2>CACHELOT IS SOCIAL</h2>
+            <h4>We love hearing from you!</h4>
+            <hr/>
         </header>
     </div>
   </div>
   <!-- Social media widgets -->
   <div class="row">
-    <div class="col-sm-12 col-xs-12">
-      <div class="col-sm-6 col-xs-12">
+    <div class="col-sm-11 col-xs-12">
+      <div class="col-sm-5 col-sm-offset-1 col-xs-12">
           <!-- Twitter Page Widget -->
           <a class="twitter-timeline"
              href="https://twitter.com/cachelot_io"
              data-widget-id="643555611154776065">Tweets by @cachelot_io</a>
           <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
       </div>
-      <div class="col-sm-6 col-xs-12">
+      <div class="col-sm-5 col-xs-11">
           <!-- Facebook Page Widget -->
           <div class="fb-page"
-               data-href="https://www.facebook.com/cachelot.io"
-               data-tabs="timeline"
-               data-width="320"
-               data-height="400"
-               data-small-header="false"
-               data-adapt-container-width="true"
-               data-hide-cover="true"
-               data-show-facepile="true">
-              <div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/cachelot.io">
-                  <a href="https://www.facebook.com/cachelot.io">Cachelot</a></blockquote>
+              data-href="https://www.facebook.com/cachelot.io"
+              data-tabs="timeline"
+              data-width="320"
+              data-height="400"
+              data-small-header="false"
+              data-adapt-container-width="true"
+              data-hide-cover="true"
+              data-show-facepile="true">
+              <div class="fb-xfbml-parse-ignore">
+                <blockquote cite="https://www.facebook.com/cachelot.io"><a href="https://www.facebook.com/cachelot.io">Cachelot</a></blockquote>
               </div>
           </div>
       </div>
@@ -237,10 +236,6 @@
   </div>
 </div>
 <!-- /container -->
-
-<!-- Highcharts JavaScript -->
-<script type="text/javascript" src="http://code.highcharts.com/highcharts.js"></script>
-<script type="text/javascript" src="assets/js/benchmarks.js"></script>
 
   </div>
   
@@ -260,9 +255,9 @@
     </div>
     <div class="row">
       <div class="col-md-12 centered">
-        <span class="copyright">Copyright &copy; 2015 <a href="">www.cachelot.io</a>.
+        <span class="copyright">Copyright &copy; 2015 <a href="http://www.cachelot.io">www.cachelot.io</a>.
                                 Logo design by <a href="https://www.behance.net/arttolstykh">arttolstykh</a>.
-                                Hosted by <a href="https://pages.github.com/">GitHub Pages</a></span>
+                                Hosted on <a href="https://pages.github.com/">GitHub Pages</a></span>
       </div>
     </div> <!-- row -->
   </div> <!-- container -->
