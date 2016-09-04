@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cachelot</title>
+    <title>Cachelot - C++ LRU cache library and memory efficient key-value server</title>
     <description>High-performance LRU cache library and memory efficient key-value server
 </description>
     <link>http://www.cachelot.io/</link>
     <atom:link href="http://www.cachelot.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 22 Apr 2016 21:07:59 +0200</pubDate>
-    <lastBuildDate>Fri, 22 Apr 2016 21:07:59 +0200</lastBuildDate>
+    <pubDate>Mon, 05 Sep 2016 00:21:43 +0200</pubDate>
+    <lastBuildDate>Mon, 05 Sep 2016 00:21:43 +0200</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
@@ -17,7 +17,7 @@ Have you started pet projects several times and then never finished them? &lt;br
 Have you been working on the same personal project for a couple of years? &lt;br /&gt;
 Are you planning to start a side project in your free time?&lt;/p&gt;
 
-&lt;p&gt;I have a pet project which I&amp;#39;ve been working on for three years. And it is not the first.  &lt;br /&gt;
+&lt;p&gt;I have a pet project which I’ve been working on for three years. And it is not the first.  &lt;br /&gt;
 I have a whole cemetery of unfinished projects. On the contrary, all is well at my day job; I get my stuff done on time there.&lt;/p&gt;
 
 &lt;p&gt;This situation is not surprising though. A pet project is meant to be fun, but finishing it requires monotonous polishing.&lt;/p&gt;
@@ -25,61 +25,67 @@ I have a whole cemetery of unfinished projects. On the contrary, all is well at 
 &lt;p&gt;At some point I figured out that the most fun part is seeing how my idea helps others. &lt;br /&gt;
 So, I finally decided I had to finish at least one project; however, I first had to figure out what was preventing me from progressing in the first place.&lt;/p&gt;
 
-&lt;h2&gt;Let&amp;#39;s start from the beginning: what is a pet project?&lt;/h2&gt;
+&lt;h2 id=&quot;lets-start-from-the-beginning-what-is-a-pet-project&quot;&gt;Let’s start from the beginning: what is a pet project?&lt;/h2&gt;
 
 &lt;p&gt;From my experience (and from the people I know), it is something that cannot be finished for the following reasons:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;We constantly lie to ourselves; it’s the way our brains work. Instead of saying: “I&amp;#39;ve failed on this,&amp;quot; we say: “I am no longer interested in this”;&lt;/li&gt;
-&lt;li&gt;There is no literature body on the topic;&lt;/li&gt;
-&lt;li&gt;It is hard to start work on something that is “unknown”; and&lt;/li&gt;
-&lt;li&gt;Even the most interesting work gets tedious over time.&lt;/li&gt;
+  &lt;li&gt;We constantly lie to ourselves; it’s the way our brains work. Instead of saying: “I’ve failed on this,” we say: “I am no longer interested in this”;&lt;/li&gt;
+  &lt;li&gt;There is no literature body on the topic;&lt;/li&gt;
+  &lt;li&gt;It is hard to start work on something that is “unknown”; and&lt;/li&gt;
+  &lt;li&gt;Even the most interesting work gets tedious over time.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;There are thousands more reasons and excuses, so let&amp;#39;s throw away the idea of obscure and unclear &amp;quot;pet projects&amp;quot;, and let&amp;#39;s focus on something that will bring us to the finish.&lt;/p&gt;
+&lt;p&gt;There are thousands more reasons and excuses, so let’s throw away the idea of obscure and unclear “pet projects”, and let’s focus on something that will bring us to the finish.&lt;/p&gt;
 
-&lt;h2&gt;Project. Ordinary project&lt;/h2&gt;
+&lt;h2 id=&quot;project-ordinary-project&quot;&gt;Project. Ordinary project&lt;/h2&gt;
 
 &lt;p&gt;Everybody knows how to work on a project; how to stay focused and how to stay motivated to the end; we do this everyday in our careers.&lt;/p&gt;
 
 &lt;p&gt;You may think about all those diagrams and Excel sheets and that projects are boring but this personal project, it is still going to be fun.&lt;/p&gt;
 
-&lt;p&gt;First of all, think about the long-term rewards; watching how your personal project grows will be so enjoyable. &lt;/p&gt;
+&lt;p&gt;First of all, think about the long-term rewards; watching how your personal project grows will be so enjoyable.&lt;/p&gt;
 
-&lt;p&gt;Working on different roles on the project is a unique experience that will benefit your professional career too. 
+&lt;p&gt;Working on different roles on the project is a unique experience that will benefit your professional career too.
 You do need to be patient, but the rewards are worth it.&lt;/p&gt;
 
 &lt;p&gt;Remember, this is not a sprint, it is a marathon.&lt;/p&gt;
 
-&lt;h3&gt;Goal&lt;/h3&gt;
+&lt;h3 id=&quot;goal&quot;&gt;Goal&lt;/h3&gt;
 
 &lt;p&gt;Even if your project is months away from starting, you should honestly ask yourself the following questions:&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;What is my ultimate goal? (Why am I doing this?)&lt;/p&gt;
+  &lt;p&gt;What is my ultimate goal? (Why am I doing this?)&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;There are many shiny things on a way to the finish line, distracting you from getting stuff done. The answer to this question will keep your focus on top-priority tasks. 
-The goal must be clear. For example, saying: “I want to learn X technology,&amp;quot; is not a clear goal. Rather, you should say: “I want to learn X technology in order to achieve Y.&amp;quot;&lt;/p&gt;
+&lt;p&gt;There are many shiny things on a way to the finish line, distracting you from getting stuff done. The answer to this question will keep your focus on top-priority tasks.
+The goal must be clear. For example, saying: “I want to learn X technology,” is not a clear goal. Rather, you should say: “I want to learn X technology in order to achieve Y.”&lt;/p&gt;
 
-&lt;p&gt;The answer to the above questions must be honest. If you want to make money on your project, then why lie to yourself. Don’t think: “I&amp;#39;ll make an excellent product, and money will come.&amp;quot; 
+&lt;p&gt;The answer to the above questions must be honest. If you want to make money on your project, then why lie to yourself. Don’t think: “I’ll make an excellent product, and money will come.”
 It is not going to happen. You should focus on ensuring that your product is profitable, instead of creating something that nobody will use.&lt;/p&gt;
 
-&lt;h3&gt;Time&lt;/h3&gt;
+&lt;h3 id=&quot;time&quot;&gt;Time&lt;/h3&gt;
 
 &lt;p&gt;Time management is one of the hardest parts. There is no silver bullet, although there are a few tips that can help:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Start by planning. Nothing works better than the good-old Gantt charts. Estimate and write down every planned feature. Ensure that it will take more than one lifetime to complete them all. Move some features to the backlog. Repeat. &lt;br /&gt;
-Again, a clear understanding of your goal will help you to prioritize. &lt;br /&gt; 
-Keep in mind that the days in your plan are not the same as an eight-hour work day;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Track the time you have spent on side-project tasks. It will make your estimation be much more accurate. Also, time tracking will tell you whether you are moving in the right direction or wasting your time on unnecessary details. Most importantly, seeing how much you have done keeps you motivated;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Establish milestones and keep the plan up to date.&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Start by planning. Nothing works better than the good-old Gantt charts. Estimate and write down every planned feature. Ensure that it will take more than one lifetime to complete them all. Move some features to the backlog. Repeat. &lt;br /&gt;
+Again, a clear understanding of your goal will help you to prioritize. &lt;br /&gt;
+Keep in mind that the days in your plan are not the same as an eight-hour work day;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Track the time you have spent on side-project tasks. It will make your estimation be much more accurate. Also, time tracking will tell you whether you are moving in the right direction or wasting your time on unnecessary details. Most importantly, seeing how much you have done keeps you motivated;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Establish milestones and keep the plan up to date.&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3&gt;Resources&lt;/h3&gt;
+&lt;h3 id=&quot;resources&quot;&gt;Resources&lt;/h3&gt;
 
-&lt;p&gt;At first, it may seem that your personal project has no resources to be managed, but it is not so. To begin with, think about your time. You can calculate your cost as a salary per hour. 
+&lt;p&gt;At first, it may seem that your personal project has no resources to be managed, but it is not so. To begin with, think about your time. You can calculate your cost as a salary per hour.
 Now think about the money, what would be more efficient? To repair your sink in the kitchen by yourself or pay to someone else to do it and spend your free time on your personal project?&lt;/p&gt;
 
 &lt;p&gt;If you are supposed to make money on your project, why not start it straight away? You can hire someone to build you a website or do some research for you.&lt;/p&gt;
@@ -89,54 +95,58 @@ Now think about the money, what would be more efficient? To repair your sink in 
 &lt;p&gt;Here are some tips that work for me:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Always have a list of tasks. There are always things to do. If you do not feel up for one task, choose another. Again, ensure that you do not waste time on unnecessary things.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Leave some work for tomorrow. I only have only 2-3 hours in the evening, it is much easier to continue yesterday&amp;#39;s task than starting something new. Also, it eliminates the need for warm-up (with only 2-3 hours, there is no time for Facebook, or my favorite comic strip or tech portal)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;See what others do, seek for your own sources of motivation.&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Always have a list of tasks. There are always things to do. If you do not feel up for one task, choose another. Again, ensure that you do not waste time on unnecessary things.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Leave some work for tomorrow. I only have only 2-3 hours in the evening, it is much easier to continue yesterday’s task than starting something new. Also, it eliminates the need for warm-up (with only 2-3 hours, there is no time for Facebook, or my favorite comic strip or tech portal)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;See what others do, seek for your own sources of motivation.&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Now that you have read about project management, you may think: &amp;quot;Where is the fun part?&amp;quot;&lt;/p&gt;
+&lt;p&gt;Now that you have read about project management, you may think: “Where is the fun part?”&lt;/p&gt;
 
 &lt;p&gt;I bet your side-project is all about innovations. At least it is innovative to you; why would you have begun it otherwise?&lt;/p&gt;
 
 &lt;p&gt;And managing an innovative product under uncertain conditions, without knowing the audience, means that. Wait, isn’t it a…&lt;/p&gt;
 
-&lt;h2&gt;Startup&lt;/h2&gt;
+&lt;h2 id=&quot;startup&quot;&gt;Startup&lt;/h2&gt;
 
-&lt;p&gt;Startups are fun, everyone knows that. There is a bunch of blogs, books, and other information on startups. 
+&lt;p&gt;Startups are fun, everyone knows that. There is a bunch of blogs, books, and other information on startups.
 And many techniques from the startup world can be used in your project right now.&lt;/p&gt;
 
-&lt;h3&gt;Minimum Viable Product (MVP)&lt;/h3&gt;
+&lt;h3 id=&quot;minimum-viable-product-mvp&quot;&gt;Minimum Viable Product (MVP)&lt;/h3&gt;
 
-&lt;p&gt;Startups use MVP to prove assumptions about their audience. Such as: &amp;quot;will somebody want to use it?&amp;quot;, &amp;quot;will people pay for this?&amp;quot;, etc. 
+&lt;p&gt;Startups use MVP to prove assumptions about their audience. Such as: “will somebody want to use it?”, “will people pay for this?”, etc.
 When it comes to personal projects, role of MVP is a bit different. Having a viable product keeps you motivated. It is hard to work on something you cannot instantly play with. If I need to write a bunch of code, before I will able to run it, I write a unit tests. This helps me to move on (not to mention profits of early testing).&lt;/p&gt;
 
-&lt;p&gt;Keep the product running consistently not only motivates you but also disciplines you to plan changes accordingly. For instance, it allows you to concentrate on one change at a time and you don&amp;#39;t tend to make too many changes at once.&lt;/p&gt;
+&lt;p&gt;Keep the product running consistently not only motivates you but also disciplines you to plan changes accordingly. For instance, it allows you to concentrate on one change at a time and you don’t tend to make too many changes at once.&lt;/p&gt;
 
-&lt;h3&gt;Audience&lt;/h3&gt;
+&lt;h3 id=&quot;audience&quot;&gt;Audience&lt;/h3&gt;
 
 &lt;p&gt;Startups seek for their audience all the time. And you should. Of course, you are not alone. There are many people that will love your idea as much as you do. Tell them about your project! They may give you useful advice. Any real-life feedback will motivate you more than a thousand cat videos will.&lt;/p&gt;
 
 &lt;p&gt;I suggest you to read about the startup management, and you will find how to apply this techniques to your personal project.&lt;/p&gt;
 
-&lt;h2&gt;Productivity knows no pain&lt;/h2&gt;
+&lt;h2 id=&quot;productivity-knows-no-pain&quot;&gt;Productivity knows no pain&lt;/h2&gt;
 
 &lt;p&gt;The biggest problem is a constant lack of time. It is not just about side projects - it is common. You cannot extend your working day, although you can be more productive in the time you have.&lt;/p&gt;
 
-&lt;h4&gt;Follow a regime&lt;/h4&gt;
+&lt;h4 id=&quot;follow-a-regime&quot;&gt;Follow a regime&lt;/h4&gt;
+&lt;p&gt;Here come the bad news: Human beings are more productive when they are living on a schedule. If I stay up until 4am today, I will not be able to finish my work tomorrow. This leads to overtime, which means no time for my personal project, and so on and so on.&lt;/p&gt;
 
-&lt;p&gt;Here comes the bad news: Human beings are more productive when they are living on a schedule. If I stay up until 4am today, I will not be able to finish my work tomorrow. This leads to overtime, which means no time for my personal project, and so on and so on. &lt;/p&gt;
-
-&lt;h4&gt;Sport activities&lt;/h4&gt;
-
+&lt;h4 id=&quot;sport-activities&quot;&gt;Sport activities&lt;/h4&gt;
 &lt;p&gt;Exercise is an important component to increasing motivation and efficiency. It can be difficult to start, but the rewards are priceless. It is hard to describe the feeling when you want to run just because you can.&lt;/p&gt;
 
-&lt;h4&gt;Stay balanced&lt;/h4&gt;
-
+&lt;h4 id=&quot;stay-balanced&quot;&gt;Stay balanced&lt;/h4&gt;
 &lt;p&gt;This one is tough. Side projects can drain all your energy and even lead to burnout – an awful condition in which, despite knowing you have to rest, you are too tired and stressed to take a break. It is very hard to break this cycle.&lt;/p&gt;
 
 &lt;p&gt;That is it. I hope this article will help you finish your magnificent project, and that the world will become a better place through it.&lt;/p&gt;
 
-&lt;h4&gt;If you have some tips on personal project management, please share them in the comments.&lt;/h4&gt;
+&lt;h4 id=&quot;if-you-have-some-tips-on-personal-project-management-please-share-them-in-the-comments&quot;&gt;If you have some tips on personal project management, please share them in the comments.&lt;/h4&gt;
+
 </description>
         <pubDate>Wed, 29 Apr 2015 00:00:00 +0200</pubDate>
         <link>http://www.cachelot.io/blog/2015/04/29/Why-We-Should-Stop-Working-on-Pet-Projects.html</link>
@@ -149,18 +159,18 @@ When it comes to personal projects, role of MVP is a bit different. Having a via
     
       <item>
         <title>Memcached Performance Tuning</title>
-        <description>&lt;p&gt;Memcached is often threated as a zero-configuration system. This isn&amp;#39;t quite true.
-Proper configuration to the hardware and client application&amp;#39;s behavior can significantly improve overall performance.&lt;/p&gt;
+        <description>&lt;p&gt;Memcached is often threated as a zero-configuration system. This isn’t quite true.
+Proper configuration to the hardware and client application’s behavior can significantly improve overall performance.&lt;/p&gt;
 
-&lt;p&gt;Memcached is pretty simple, and there is a handful of statistics. You only need to know a bit of internals to use it. 
-Luckily, it&amp;#39;s not a complicated thing at all.&lt;/p&gt;
+&lt;p&gt;Memcached is pretty simple, and there is a handful of statistics. You only need to know a bit of internals to use it.
+Luckily, it’s not a complicated thing at all.&lt;/p&gt;
 
-&lt;p&gt;As usual, there is no silver bullet. You&amp;#39;re free to experiment. I even encourage you to do this.&lt;/p&gt;
+&lt;p&gt;As usual, there is no silver bullet. You’re free to experiment. I even encourage you to do this.&lt;/p&gt;
 
-&lt;h2&gt;Stats&lt;/h2&gt;
+&lt;h2 id=&quot;stats&quot;&gt;Stats&lt;/h2&gt;
+&lt;p&gt;The starting point of performance tuning is the stats. The easiest way to see stats is to connect to the Memcached server with telnet and run &lt;code class=&quot;highlighter-rouge&quot;&gt;stats&lt;/code&gt; in the telnet console.&lt;/p&gt;
 
-&lt;p&gt;The starting point of performance tuning is the stats. The easiest way to see stats is to connect to the Memcached server with telnet and run &lt;code&gt;stats&lt;/code&gt; in the telnet console.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;$ telnet localhost 11211
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ telnet localhost 11211
 Connected to localhost.
 Escape character is &#39;^]&#39;.
 telnet&amp;gt; stats
@@ -178,57 +188,53 @@ STAT total_connections 123
 STAT connection_structures 42
 STAT reserved_fds 20
 ...
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;Command Hits / Misses&lt;/h3&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;p&gt;There are number of hits/misses stats for every command, and these can reveal problems in application behavior. 
-For instance, an application may aggressively cache short-living or rarely used objects, causing a hight rate of misses and evictions. 
+&lt;h3 id=&quot;command-hits--misses&quot;&gt;Command Hits / Misses&lt;/h3&gt;
+&lt;p&gt;There are number of hits/misses stats for every command, and these can reveal problems in application behavior.
+For instance, an application may aggressively cache short-living or rarely used objects, causing a hight rate of misses and evictions.
 The rule of thumb here is to keep the cache miss ratio close to zero.&lt;/p&gt;
 
-&lt;h3&gt;Evictions&lt;/h3&gt;
+&lt;h3 id=&quot;evictions&quot;&gt;Evictions&lt;/h3&gt;
+&lt;p&gt;One of the most important stats is &lt;code class=&quot;highlighter-rouge&quot;&gt;evictions&lt;/code&gt;. It is the number of non-expired Items that were removed from the cache to free up space for new items.&lt;/p&gt;
 
-&lt;p&gt;One of the most important stats is &lt;code&gt;evictions&lt;/code&gt;. It is the number of non-expired Items that were removed from the cache to free up space for new items.&lt;/p&gt;
-
-&lt;p&gt;A high number of evictions may indicate that applications overuse the cache or that the amount of memory allocated for Items storage is not sufficient. 
+&lt;p&gt;A high number of evictions may indicate that applications overuse the cache or that the amount of memory allocated for Items storage is not sufficient.
 The maximum amount of memory used to store Items can be increased by the -m command-line argument (default value is 64Mb).&lt;/p&gt;
 
-&lt;h3&gt;Connection Yields&lt;/h3&gt;
-
+&lt;h3 id=&quot;connection-yields&quot;&gt;Connection Yields&lt;/h3&gt;
 &lt;p&gt;The number of times when a connection was yielded during batch execution.&lt;/p&gt;
 
-&lt;p&gt;The slowest part of the request execution is the network roundtrip. The application should use batching to achieve maximum performance. 
+&lt;p&gt;The slowest part of the request execution is the network roundtrip. The application should use batching to achieve maximum performance.
 Several write requests can be combined into a single network IO operation. Read operations should utilize multi-key requests.&lt;/p&gt;
 
-&lt;p&gt;The downside of using batches is possible connection starvation - the situation when one connection is forced to wait until another finishes its batch. Memcached limits the number of requests per single network IO operation to prevent starvation. Every time a connection tries to execute a batch bigger than this limit; Memcached moves this connection to the back of the processing queue and increments the &lt;code&gt;conn_yields&lt;/code&gt; stat.&lt;/p&gt;
+&lt;p&gt;The downside of using batches is possible connection starvation - the situation when one connection is forced to wait until another finishes its batch. Memcached limits the number of requests per single network IO operation to prevent starvation. Every time a connection tries to execute a batch bigger than this limit; Memcached moves this connection to the back of the processing queue and increments the &lt;code class=&quot;highlighter-rouge&quot;&gt;conn_yields&lt;/code&gt; stat.&lt;/p&gt;
 
-&lt;p&gt;The command-line parameter &lt;code&gt;-R&lt;/code&gt; is in charge of the maximum number of requests per network IO event (default value is 20). The application should adopt its batch size according to this parameter. Please note that the requests limit does not affect multi-key reads, or the number of keys per get request.&lt;/p&gt;
+&lt;p&gt;The command-line parameter &lt;code class=&quot;highlighter-rouge&quot;&gt;-R&lt;/code&gt; is in charge of the maximum number of requests per network IO event (default value is 20). The application should adopt its batch size according to this parameter. Please note that the requests limit does not affect multi-key reads, or the number of keys per get request.&lt;/p&gt;
 
-&lt;h2&gt;Other Command-line Arguments&lt;/h2&gt;
+&lt;h2 id=&quot;other-command-line-arguments&quot;&gt;Other Command-line Arguments&lt;/h2&gt;
 
-&lt;h3&gt;Number of threads&lt;/h3&gt;
-
-&lt;p&gt;The most important setting influenced overall performance: number of threads &lt;code&gt;-t&lt;/code&gt;. The default value of 4 is a good choice for almost every setup.
+&lt;h3 id=&quot;number-of-threads&quot;&gt;Number of threads&lt;/h3&gt;
+&lt;p&gt;The most important setting influenced overall performance: number of threads &lt;code class=&quot;highlighter-rouge&quot;&gt;-t&lt;/code&gt;. The default value of 4 is a good choice for almost every setup.
 Avoid using more than eight threads, it leads to high lock contention inside of Memcached and performance degrade.&lt;/p&gt;
 
 &lt;p&gt;A configuration with a single thread should never be used, even on a single-core machine.&lt;/p&gt;
 
-&lt;h3&gt;Disable use of CAS&lt;/h3&gt;
-
+&lt;h3 id=&quot;disable-use-of-cas&quot;&gt;Disable use of CAS&lt;/h3&gt;
 &lt;p&gt;A compare-and-swap operation of Memcached requires a separate Item field to store unique CAS values. It takes an additional 8 bytes of memory per Item.
-If CAS operation is not used by your application, &lt;code&gt;-C&lt;/code&gt; flag can save some memory.&lt;/p&gt;
+If CAS operation is not used by your application, &lt;code class=&quot;highlighter-rouge&quot;&gt;-C&lt;/code&gt; flag can save some memory.&lt;/p&gt;
 
-&lt;h3&gt;Memcached as In-memory Storage&lt;/h3&gt;
+&lt;h3 id=&quot;memcached-as-in-memory-storage&quot;&gt;Memcached as In-memory Storage&lt;/h3&gt;
+&lt;p&gt;There is &lt;code class=&quot;highlighter-rouge&quot;&gt;-M&lt;/code&gt; argument that tells Memcached to reply with an error when out-of-memory instead of evicting existing items.
+In that way, it’s possible to use Memcached as a consistent in-memory storage.&lt;/p&gt;
 
-&lt;p&gt;There is &lt;code&gt;-M&lt;/code&gt; argument that tells Memcached to reply with an error when out-of-memory instead of evicting existing items.
-In that way, it&amp;#39;s possible to use Memcached as a consistent in-memory storage.&lt;/p&gt;
-
-&lt;h2&gt;General Advices&lt;/h2&gt;
-
+&lt;h2 id=&quot;general-advices&quot;&gt;General Advices&lt;/h2&gt;
 &lt;p&gt;Use the pool of long-living connections to the server. Memcached is designed to serve many connections simultaneously and with tens of connections you will achieve much better performance.&lt;/p&gt;
 
 &lt;p&gt;Store Items over TCP, retrieve over UDP. As was said: the network transportation is a main source of delays. On a high data volume, TCP packet size overhead can significantly impact overall performance.&lt;/p&gt;
 
-&lt;h4&gt;&lt;em&gt;Share your Memcached tips in the comments.&lt;/em&gt;&lt;/h4&gt;
+&lt;h4 id=&quot;share-your-memcached-tips-in-thecomments&quot;&gt;&lt;em&gt;Share your Memcached tips in the comments.&lt;/em&gt;&lt;/h4&gt;
+
 </description>
         <pubDate>Mon, 20 Apr 2015 00:00:00 +0200</pubDate>
         <link>http://www.cachelot.io/blog/2015/04/20/Speed-up-your-application-by-fine-tuning-Memcached.html</link>

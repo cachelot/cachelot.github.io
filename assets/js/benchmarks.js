@@ -9,7 +9,7 @@ var chartData = {
             memcached: [1628.08, 1628.11, 1628.03, 1628.06, 1628.05, 1628.13, 1628.04, 1628.04, 1628.02, 1628.04]
         },
         medium: {
-            name: 'Dataset: 1024 ~ 4096 bytes "medium"',
+            name: 'Dataset: 1 ~ 4 Kb "medium"',
             cachelot: [2019.40, 1975.94, 1939.00, 1929.81, 1929.53, 1930.23, 1930.93, 1931.25, 1932.64, 1932.18],
             memcached: [1775.49, 1775.34, 1775.39, 1775.30, 1775.30, 1775.40, 1775.35, 1775.34, 1775.31, 1775.27]
         },
@@ -177,10 +177,10 @@ var chartForAll = {
 
 
 $(document).ready(function () {
-    $('#chart_small').highcharts(jQuery.extend(true, {}, chartTemplate, chartForSmall))
-    $('#chart_medium').highcharts(jQuery.extend(true, {}, chartTemplate, chartForMedium))
-    $('#chart_large').highcharts(jQuery.extend(true, {}, chartTemplate, chartForLarge))
-    $('#chart_all').highcharts(jQuery.extend(true, {}, chartTemplate, chartForAll))
+    $('#chart_small').highcharts(jQuery.extend(true, {}, chartTemplate, chartForSmall));
+    $('#chart_medium').highcharts(jQuery.extend(true, {}, chartTemplate, chartForMedium));
+    $('#chart_large').highcharts(jQuery.extend(true, {}, chartTemplate, chartForLarge));
+    $('#chart_all').highcharts(jQuery.extend(true, {}, chartTemplate, chartForAll));
 });
 
 })(); // End js namespace
