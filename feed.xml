@@ -4,11 +4,11 @@
     <title>Cachelot - C++ LRU cache library and memory efficient key-value server</title>
     <description>High-performance LRU cache library and memory efficient key-value server
 </description>
-    <link>http://www.cachelot.io/</link>
-    <atom:link href="http://www.cachelot.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 05 Sep 2016 23:25:33 +0200</pubDate>
-    <lastBuildDate>Mon, 05 Sep 2016 23:25:33 +0200</lastBuildDate>
-    <generator>Jekyll v3.1.2</generator>
+    <link>https://www.cachelot.io/</link>
+    <atom:link href="https://www.cachelot.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 19 Aug 2018 02:46:46 +0200</pubDate>
+    <lastBuildDate>Sun, 19 Aug 2018 02:46:46 +0200</lastBuildDate>
+    <generator>Jekyll v3.8.3</generator>
     
       <item>
         <title>Why We Should Stop Working on Pet Projects</title>
@@ -149,8 +149,8 @@ When it comes to personal projects, role of MVP is a bit different. Having a via
 
 </description>
         <pubDate>Wed, 29 Apr 2015 00:00:00 +0200</pubDate>
-        <link>http://www.cachelot.io/blog/2015/04/29/Why-We-Should-Stop-Working-on-Pet-Projects.html</link>
-        <guid isPermaLink="true">http://www.cachelot.io/blog/2015/04/29/Why-We-Should-Stop-Working-on-Pet-Projects.html</guid>
+        <link>https://www.cachelot.io/blog/2015/04/29/Why-We-Should-Stop-Working-on-Pet-Projects.html</link>
+        <guid isPermaLink="true">https://www.cachelot.io/blog/2015/04/29/Why-We-Should-Stop-Working-on-Pet-Projects.html</guid>
         
         
         <category>blog</category>
@@ -170,9 +170,9 @@ Luckily, it’s not a complicated thing at all.&lt;/p&gt;
 &lt;h2 id=&quot;stats&quot;&gt;Stats&lt;/h2&gt;
 &lt;p&gt;The starting point of performance tuning is the stats. The easiest way to see stats is to connect to the Memcached server with telnet and run &lt;code class=&quot;highlighter-rouge&quot;&gt;stats&lt;/code&gt; in the telnet console.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ telnet localhost 11211
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ telnet localhost 11211
 Connected to localhost.
-Escape character is &#39;^]&#39;.
+Escape character is '^]'.
 telnet&amp;gt; stats
 
 STAT pid 12950
@@ -188,8 +188,7 @@ STAT total_connections 123
 STAT connection_structures 42
 STAT reserved_fds 20
 ...
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;command-hits--misses&quot;&gt;Command Hits / Misses&lt;/h3&gt;
 &lt;p&gt;There are number of hits/misses stats for every command, and these can reveal problems in application behavior.
@@ -237,8 +236,8 @@ In that way, it’s possible to use Memcached as a consistent in-memory storage.
 
 </description>
         <pubDate>Mon, 20 Apr 2015 00:00:00 +0200</pubDate>
-        <link>http://www.cachelot.io/blog/2015/04/20/Speed-up-your-application-by-fine-tuning-Memcached.html</link>
-        <guid isPermaLink="true">http://www.cachelot.io/blog/2015/04/20/Speed-up-your-application-by-fine-tuning-Memcached.html</guid>
+        <link>https://www.cachelot.io/blog/2015/04/20/Speed-up-your-application-by-fine-tuning-Memcached.html</link>
+        <guid isPermaLink="true">https://www.cachelot.io/blog/2015/04/20/Speed-up-your-application-by-fine-tuning-Memcached.html</guid>
         
         
         <category>blog</category>
